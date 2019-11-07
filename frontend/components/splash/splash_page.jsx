@@ -1,24 +1,32 @@
 import React from 'react';
 
-const splash = () => {
-  return (
-    <div id='base'>
-      <div id="title">
-        <h1>Movie will help.*</h1>
-        <h3>*with video collaboration, video distribution and video everything else.</h3>
-      </div>
-      <div id="front_buttons">
-        <button id="join_button_splash">Join for free</button>
-        <button id="plan_button_splash">See plans</button>
-      </div>
+class Splash extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+    }
+  }
 
-      <div id="center_main" >
-        <img src="https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"/>
-        <p>video goes here</p>
-      </div>
+  render(){
+    return (
+      <div id='base'>
+        <div id="title">
+          <h1>Phil can help.*</h1>
+          <h3>*with website design, website development and website everything else.</h3>
+        </div>
+        <div id="front_buttons">
+          <button id="linkedin_splash">My Linkedin</button>
+          <button id="portfolio_splash">See portfolio</button>
+        </div>
 
-    </div>
-  )
+        <div id="center_main" >
+          <img src="https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"/>
+          {/* <video src="" type=""></video> */}
+        </div>
+
+      </div>
+    )
+  }
 }
 
-export default splash;
+export default Splash;
