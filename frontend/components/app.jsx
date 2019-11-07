@@ -10,6 +10,7 @@ const App = () => (
       <NavContainer />
     </header>
     <Switch>
+      {/* <Route path='log_in' component={LoginContainer} /> */}
       <Route path='/' component={Splash} />
     </Switch>
   </div>

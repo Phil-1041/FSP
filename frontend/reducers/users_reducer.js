@@ -1,6 +1,6 @@
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
-  switch(action.type) {
+  switch(state={}, action.type) {
     default: 
       return state;
   }

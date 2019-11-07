@@ -18,16 +18,16 @@ const receiveErrors = errors => ({
   errors
 })
 
-export const signup = user => dispatch => (
+export const signupUser = user => dispatch => (
   signup(user).then( user => dispatch(receiveCurrentUser(user)))
     .fail( errors => (dispatch(receiveErrors(errors.responseJSON))) )
 );
 
-export const login = user => dispatch => (
+export const loginUser = user => dispatch => (
   login(user).then( user => dispatch(receiveCurrentUser(user)))
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
-export const logout = () => dispatch => (
+export const logoutUser = () => dispatch => (
   logout().then( user => dispatch(logoutCurrentUser()))
 );
