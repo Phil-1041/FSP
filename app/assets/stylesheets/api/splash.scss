@@ -1,5 +1,75 @@
 #base {
   margin-top: 90px;
-  height: 10000px;
+  height: 20000px;
   background-image: linear-gradient(#F2F9FF,white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: hidden;
+  // overflow: hidden;
+}
+
+#title {
+  box-sizing: border-box;
+  padding-top: 75px;
+}
+
+#title h1 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;;
+  color: rgb(26, 46, 59);
+  font-size: 75px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #5b6b76b2;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+#front_buttons{
+  padding-top: 40px;
+  display: flex;
+}
+
+#join_button_splash, #plan_button_splash{
+  width: 140px;
+  height: 50px;
+  border: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  color: rgb(26, 46, 59);
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f2f8ff;
+}
+
+#join_button_splash {
+  color: white;
+  background-color: #5077a7;
+}
+
+// #center_main {
+// }
+
+#center_main > img {
+  width: 537px;
+  height: 537px;
+  position: absolute;
+  top: 500px;
+  left: 0px;
+  z-index: 0;
+}
+
+#center_main > p{
+  margin-top: 200px;
+  z-index: 20;
 }

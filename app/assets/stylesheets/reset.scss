@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, c
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, a,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, ul, li, .link
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
@@ -13,8 +13,8 @@ time, mark, audio, video {
   margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	// font-size: 100%;
+	font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-family: Arial, Helvetica, sans-serif;
 	vertical-align: baseline;
 }
@@ -30,4 +30,8 @@ ol, ul {
 button {
 	outline: none;
 	border: none;
+}
+
+#root {
+	  background-image: linear-gradient(#F2F9FF,white);
 }

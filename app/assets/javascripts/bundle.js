@@ -231,7 +231,19 @@ __webpack_require__.r(__webpack_exports__);
 var splash = function splash() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "base"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Inside Splash"));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Movie will help.*"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "*with video collaboration, video distribution and video everything else.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "front_buttons"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "join_button_splash"
+  }, "Join for free"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "plan_button_splash"
+  }, "See plans")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "center_main"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "video goes here")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (splash);

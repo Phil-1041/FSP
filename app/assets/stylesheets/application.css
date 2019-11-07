@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+@import './reset.scss';
+@import './api/splash.scss';
+@import './api/sessions.scss';
