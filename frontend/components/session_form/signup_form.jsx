@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
           <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
           <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
           <p className='text'>Forgot your password?</p>
-          <input id='email-login' type="submit" value='Join with email' onClick={this.handleSubmit} />
+          <input className='submit-form' type="submit" value='Join with email' onClick={this.handleSubmit} />
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>

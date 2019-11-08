@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      password: ""
+      name: 'DemoUser',
+      password: 'movieo'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -16,8 +16,9 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user)
-      .then(this.props.history.push("/"));
+    // debugger
+    this.props.loginUser(user)
+      .then(() => this.props.history.push('/log_in'));
   }
 
   handleInput(type) {
@@ -56,7 +57,7 @@ class LoginForm extends React.Component {
           <input type="text" value={this.state.name} onChange={this.handleInput('name')} />
           <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
           <p className='text'>Forgot your password?</p>
-          <input id='email-login' type="submit" value='Log in with email' onClick={this.handleSubmit} />
+          <input className='submit-form' type="submit" value='Log in with email' onClick={this.handleSubmit} />
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
@@ -73,4 +74,4 @@ class LoginForm extends React.Component {
 
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

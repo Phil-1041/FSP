@@ -20,7 +20,7 @@ const receiveErrors = errors => ({
 
 export const signupUser = user => dispatch => (
   signup(user).then( user => dispatch(receiveCurrentUser(user)))
-    .fail( errors => (dispatch(receiveErrors(errors.responseJSON))) )
+    .fail(errors => (dispatch(receiveErrors(errors.responseJSON))) )
 );
 
 export const loginUser = user => dispatch => (
