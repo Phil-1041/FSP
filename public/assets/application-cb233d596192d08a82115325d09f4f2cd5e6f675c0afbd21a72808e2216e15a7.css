@@ -1,0 +1,623 @@
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #F2F9FF;
+}
+
+/* line 7, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+nav {
+  height: 90px;
+  width: 100%;
+  color: #1a2e3b;
+  position: fixed;
+  top: 0;
+  background-color: #F2F9FF;
+  z-index: 1;
+}
+
+/* line 17, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+nav button {
+  color: inherit;
+  font-family: Helvetica;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* line 24, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.left_nav button {
+  background-color: #F1F8FF;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 30, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#logo {
+  background: url("../../images/movie_withcolorv2_sprite.png") no-repeat;
+  width: 139px;
+  height: 75px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: inline-block;
+}
+
+/* line 39, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#join {
+  font-size: medium;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  border: 1px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #1a2e3b;
+  text-shadow: 1px 1px 1px rgba(26, 46, 59, 0.25);
+  background-color: #F1F8FF;
+  width: 72px;
+}
+
+/* line 56, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#login {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 61, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#join:hover {
+  border-color: black;
+}
+
+/* line 65, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.navBar {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 71, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.left_nav {
+  display: flex;
+  align-items: center;
+}
+
+/* line 76, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#inspiration {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 82, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#inspiration img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 88, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#insp_dropdown:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 92, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#solutions {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 98, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#solutions img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 104, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#solutions:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 108, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#pricing {
+  padding-left: 20px;
+}
+
+/* line 112, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.right_nav {
+  display: flex;
+  align-items: center;
+  margin-right: 52px;
+}
+
+/* line 118, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#search {
+  font-size: 15px;
+  font-family: Helvetica;
+  color: #1a2e3b;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-right: 28px;
+  background-color: #F2F9FF;
+  cursor: pointer;
+}
+
+/* line 130, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#search_icon {
+  height: 16px;
+  margin-right: 3px;
+}
+
+/* line 135, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#upload {
+  background-color: #1a2e3b;
+  font-size: 15px;
+  border-radius: 3px;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border: none;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 152, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#upload img {
+  height: 25px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+}
+
+/* line 158, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#upload:hover {
+  background-color: black;
+}
+
+/* line 162, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#logo {
+  background: url("https://i.ibb.co/X8XJS7T/logo-w-back.png") no-repeat;
+  width: 109px;
+  height: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  margin-left: 60px;
+  background-position: 0 -16px;
+}
+
+/* line 173, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#logo:hover {
+  background-position: 0 -91px;
+}
+
+/* line 177, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#insp_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 182, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.insp_content, .solu_content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  min-width: 240px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-family: Helvetica;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+/* line 197, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.solu_content {
+  top: 67px;
+}
+
+/* line 201, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.insp_content p, .solu_content p {
+  display: block;
+  transition: 0.2s;
+  width: 100%;
+  border-bottom: 1px solid #eef1f2;
+}
+
+/* line 208, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.insp_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 212, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.solu_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 216, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#insp_dropdown:hover .insp_content {
+  display: flex;
+}
+
+/* line 220, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+#solu_dropdown:hover .solu_content {
+  display: flex;
+}
+
+/* line 224, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/front_nav.scss */
+.link {
+  color: #1a2e3b;
+  font-size: inherit;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: fade_in;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fade_in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes fade_in {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+/* line 23, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-login {
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation-name: fade_in2;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade_in2;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes fade_in2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title {
+  border-radius: 3px;
+}
+
+/* line 5, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title:first-child {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  color: #1a2e3b;
+  background-color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5625rem 3.125rem;
+  border-bottom: 1px solid #D0D8DB;
+}
+
+/* line 18, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form {
+  width: 400px;
+  height: auto;
+  background-color: #FFF;
+  padding: 1.5625rem;
+  padding-bottom: 35px;
+  font-size: .875rem;
+  box-sizing: border-box;
+}
+
+/* line 28, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .9375rem;
+  font-size: 1rem;
+  margin: 0, 25px;
+  border-radius: 3px;
+  border: 1px solid #D0D8DB;
+  outline-color: #d4d8da;
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #17272E;
+  text-align: left;
+  padding-left: 1px;
+}
+
+/* line 48, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.submit-form {
+  color: white;
+  font-weight: bold;
+  background-color: #7ec300;
+  border-radius: 3px;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* line 60, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text:last-of-type {
+  box-sizing: border-box;
+  height: 16px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+/* line 68, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+#demo-login {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #4267b1;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+/* line 80, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form #session-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 20px;
+  color: #576266;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* line 90, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+#other-form-link {
+  font-size: 14px;
+  color: #36b8f1;
+  padding-left: 3px;
+}
+
+/* line 96, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+.errors {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #1a2e3b;
+  background-color: #FFEDED;
+  font-size: small;
+}
+
+/* line 109, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/session_form.scss */
+::placeholder {
+  color: #d4d8da;
+}
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/signup_modal.scss */
+.modal-signup {
+  position: relative;
+  top: -20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation-name: fade_in3;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade_in3;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes fade_in3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#base {
+  margin-top: 90px;
+  height: 20000px;
+  background-image: linear-gradient(#F2F9FF, white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 10, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#title {
+  box-sizing: border-box;
+  padding-top: 75px;
+}
+
+/* line 15, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#title h1 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #1a2e3b;
+  font-size: 75px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+/* line 25, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #1a2e3b;
+  opacity: 0.7;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+/* line 34, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#front_buttons {
+  padding-top: 40px;
+  display: flex;
+}
+
+/* line 39, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash, #portfolio_splash {
+  width: 140px;
+  height: 50px;
+  border: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  color: #1a2e3b;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f2f8ff;
+  cursor: pointer;
+}
+
+/* line 55, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash {
+  color: white;
+  background-color: #5077a7;
+  transition: 0.4s;
+}
+
+/* line 61, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash:hover {
+  background-color: #44658d;
+}
+
+/* line 65, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#portfolio_splash:hover {
+  border-color: black;
+}
+
+/* line 71, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#center_main > img {
+  width: 537px;
+  height: 537px;
+  position: absolute;
+  top: 645px;
+  left: 0px;
+  z-index: 0;
+}
+
+/* line 80, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/api/splash.scss */
+#center_main > video {
+  position: relative;
+  width: auto;
+  height: 800px;
+  background-color: lightgreen;
+  z-index: 1;
+}
+/* line 1, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, a,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, .link
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 30, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/reset.scss */
+button {
+  outline: none;
+  border: none;
+}
+
+/* line 35, /Users/Phil/Documents/Full Stack Project/movie/app/assets/stylesheets/reset.scss */
+#root {
+  background-image: linear-gradient(#F2F9FF, white);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+@import './reset.scss';
+@import './api/signup_modal.scss';
+@import './api/login_modal.scss';
+@import './api/splash.scss';
+@import './api/front_nav.scss';
+@import './api//session_form.scss';

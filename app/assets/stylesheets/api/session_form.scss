@@ -17,7 +17,7 @@
 
 .session_form {
   width: 400px;
-  height: 375px;
+  height: auto;
   background-color: #FFF;
   padding: 1.5625rem;
   padding-bottom: 35px;
@@ -33,7 +33,7 @@
   margin: ( 0, 25px);
   border-radius: 3px;
   border: 1px solid #D0D8DB;
-  outline: none;
+  outline-color: #d4d8da;
   margin-bottom: 10px;
 }
 
@@ -42,6 +42,7 @@
   font-size: 13px;
   color: #17272E;
   text-align: left;
+  padding-left: 1px;
 }
 
 .submit-form {
@@ -49,7 +50,11 @@
   font-weight: bold;
   background-color: rgb(126,195,0);
   border-radius: 3px;
-  margin: 0px
+  margin: 0px;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
 }
 
 .session_form .text:last-of-type {
@@ -88,5 +93,20 @@
   padding-left: 3px;
 }
 
+.errors {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #1a2e3b;
+  background-color: #FFEDED;
+  font-size: small;
+}
 
+::placeholder {
+  color: #d4d8da;
+}
 

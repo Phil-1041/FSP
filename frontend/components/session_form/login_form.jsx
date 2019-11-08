@@ -5,8 +5,8 @@ class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'DemoUser',
-      password: 'movieo'
+      email: '',
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
@@ -35,29 +35,35 @@ class LoginForm extends React.Component {
     $('.modal-login').fadeOut(256, () => this.props.openModal())
   }
 
-  // errors(){
-  //     // debugger
-  //     this.props.errors.map((error) => (
-  //         <li>{error[0]}</li>
-  //     )) 
-  // }
+  errors(){
+    const errors = this.props.errors.map((error, idx) => (
+      <li key={idx} className={idx} >{error}</li>)
+    )
+    if(this.props.errors.length > 0){
+      return(
+        <ul className="errors">
+          {errors}
+        </ul>
+      )
+    }
+  }
 
   render() {
-    // const errors = this.props.errors.map((error, idx) => (
-    //   <li key={idx} >{error}</li>
-    // ))
+
     return (
       <div>
         <p id='session-title'>Log in to Movie</p>
 
-        {/* <ul className="errors">{errors}
-        </ul> */}
-
         <form className="session_form">
-          <input type="text" value={this.state.name} onChange={this.handleInput('name')} />
-          <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
+          <input type="text" value={this.state.email} placeholder='Email address' onChange={this.handleInput('email')} />
+          <input type="password" value={this.state.password} placeholder='Password' onChange={this.handleInput('password')} />
           <p className='text'>Forgot your password?</p>
-          <input className='submit-form' type="submit" value='Log in with email' onClick={this.handleSubmit} />
+
+          {this.errors()}
+
+          <button className='submit-form' type="submit" onClick={this.handleSubmit}>
+            Log in with email
+          </button>
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
