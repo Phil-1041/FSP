@@ -13,3 +13,7 @@ export const closeModal = () => {
     type: CLOSE_MODAL
   };
 };
+
+// export const fadeModal = () => {
+//   $('.modal-background').fadeOut(259)
+// }

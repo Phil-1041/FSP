@@ -28,9 +28,9 @@ class SessionForm extends React.Component {
 
   whatform() {
     if (this.props.formType === 'login') {
-      return 'Log in to Vimeo'
+      return 'Log in to Movie'
     } else {
-      return 'Sign Up'
+      return 'Join Movie'
     }
   }
 
@@ -62,22 +62,21 @@ class SessionForm extends React.Component {
     // ))
     return (
       <div>
-        <h1>{this.whatform()}</h1>
+        <p id='session-title'>{this.whatform()}</p>
 
         {/* <ul className="errors">{errors}
         </ul> */}
 
         <form className="session_form">
           <input type="text" value={this.state.name} onChange={this.handleInput('name')} />
-          <br/>
           <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
-          <p>Forgot your password?</p>
-          <input type="submit" value={this.whatButton()} onClick={this.handleSubmit} />
-          <br/>
-          <p>or</p>
-          <button>Log in as Demo User</button>
-          <br/>
-          <span>{this.whatFooter()}</span>{this.props.otherForm}
+          <p className='text'>Forgot your password?</p>
+          <input id='email-login' type="submit" value={this.whatButton()} onClick={this.handleSubmit} />
+          <p className='text'>or</p>
+          <button id='demo-login'>Log in as Demo User</button>
+          <div id='session-footer'>
+            <span>{this.whatFooter()}</span>{this.props.otherForm}
+          </div>
         </form>
       </div>
     )

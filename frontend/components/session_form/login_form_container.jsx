@@ -11,11 +11,12 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   processForm: formUser => dispatch(loginUser(formUser)),
   otherForm: (
-    <button onClick={() => dispatch(openModal('signup'))}>
+    <button id='other-form-link' onClick={() => dispatch(openModal('signup'))}>
       Join
     </button>
   ),
   closeModal: () => dispatch(closeModal())
 })
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)

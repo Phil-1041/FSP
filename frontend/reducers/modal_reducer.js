@@ -5,8 +5,6 @@ export default function modalReducer(state = null, action) {
     case OPEN_MODAL:
       return action.modal;
     case CLOSE_MODAL:
-      let background = document.getElementsByClassName('modal-background').className ='hidden'
-      
       return null;
     default:
       return state;

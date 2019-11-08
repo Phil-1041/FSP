@@ -1,0 +1,92 @@
+#session-title {
+  border-radius: 3px;
+}
+
+#session-title:first-child {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  color: rgb(26,46,59);
+  background-color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5625rem 3.125rem;
+  border-bottom: 1px solid #D0D8DB;
+}
+
+.session_form {
+  width: 400px;
+  height: 375px;
+  background-color: #FFF;
+  padding: 1.5625rem;
+  padding-bottom: 35px;
+  font-size: .875rem;
+  box-sizing: border-box;
+}
+
+.session_form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .9375rem;
+  font-size: 1rem;
+  margin: ( 0, 25px);
+  border-radius: 3px;
+  border: 1px solid #D0D8DB;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.session_form .text {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #17272E;
+  text-align: left;
+}
+
+#email-login {
+  color: white;
+  font-weight: bold;
+  background-color: rgb(126,195,0);
+  border-radius: 3px;
+  margin: 0px
+}
+
+.session_form .text:last-of-type {
+  box-sizing: border-box;
+  height: 16px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+#demo-login {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #4267b1;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.session_form #session-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 20px;
+  color: #576266;
+  font-size: 14px; 
+  font-weight: lighter;
+}
+
+#other-form-link {
+  font-size: 14px;
+  color: #36b8f1;
+  padding-left: 3px;
+}
+
+
+

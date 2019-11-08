@@ -4,12 +4,20 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container'
 import SignupFormContainer from '../session_form/signup_form_container'
 
-function Modal ({ modal, closeModal }) {
-  if(!modal) { //from the state
-    return null;
+
+class Modal extends React.Component {
+  constructor(props){
+    super(props)
+    this.slowExit = this.slowExit.bind(this)
   }
-  let component;
-  switch (modal) {
+
+  render (){
+    if(!this.props.modal) {
+      // debugger
+      return null;
+    }
+    let component
+    switch (this.props.modal) {
     case 'login':
       component = <LoginFormContainer />;
       break;
@@ -18,18 +26,21 @@ function Modal ({ modal, closeModal }) {
       break;
     default:
       return null;
+    }
+        
+    return (
+      <div className="modal-background" onClick={this.slowExit}>
+        <div className="modal-child" onClick={e => e.stopPropagation()}>
+          {component}
+        </div>
+      </div> 
+    );
   }
-  return (
-    <div className= "w3-container w3-center w3-animate-opacity">
-    
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
-        {component}
-      </div>
-    </div>
-    
-    </div>
-  );
+  slowExit () {
+    $('.modal-background').fadeOut(256, 
+      () => this.props.closeModal() 
+    )
+  }
 }
 
 const mapStateToProps = state => {

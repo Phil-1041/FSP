@@ -22,10 +22,11 @@
 
 .modal-child {
   position: relative;
+  top: -100px;
   box-sizing: border-box;
   border-radius: 3px;
   width: 400px;
-  height: 500px;
+  height: 400px;
   z-index: 110;
   color: black;
   background-color: white;
@@ -42,25 +43,4 @@
   to {opacity: 1;}
 }
 
-.hidden {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  visibility: visible;
-  background-color: rgba(0,0,0,0.75);
-  -webkit-animation-name: fade_in;
-  -webkit-animation-duration: 0.3s;
-  animation-name: fade_in;
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
-}
-
-@keyframes fade_out {
-  from {opacity: 1;}
-  to {opacity: 0;}
-}
 
