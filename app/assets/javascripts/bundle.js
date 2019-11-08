@@ -427,6 +427,7 @@ function (_React$Component) {
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
+    _this.fadeoutLogin = _this.fadeoutLogin.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -447,13 +448,27 @@ function (_React$Component) {
       };
     }
   }, {
-    key: "render",
-    // errors(){
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      $('.modal-login').fadeIn(258);
+    }
+  }, {
+    key: "fadeoutLogin",
+    value: function fadeoutLogin() {
+      var _this3 = this;
+
+      $('.modal-login').fadeOut(256, function () {
+        return _this3.props.openModal();
+      });
+    } // errors(){
     //     // debugger
     //     this.props.errors.map((error) => (
     //         <li>{error[0]}</li>
     //     )) 
     // }
+
+  }, {
+    key: "render",
     value: function render() {
       // const errors = this.props.errors.map((error, idx) => (
       //   <li key={idx} >{error}</li>
@@ -483,7 +498,10 @@ function (_React$Component) {
         id: "demo-login"
       }, "Log in as Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "session-footer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Don't have an account?"), this.props.otherForm)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Don't have an account?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "other-form-link",
+        onClick: this.fadeoutLogin
+      }, "Join"))));
     }
   }]);
 
@@ -508,7 +526,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
 /* harmony import */ var _actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/modal_actions */ "./frontend/actions/modal_actions.js");
-/* harmony import */ var _login_form__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./login_form */ "./frontend/components/session_form/login_form.jsx");
+/* harmony import */ var _login_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./login_form */ "./frontend/components/session_form/login_form.jsx");
 
 
 
@@ -526,19 +544,16 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
     processForm: function processForm(formUser) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["loginUser"])(formUser));
     },
-    otherForm: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      id: "other-form-link",
-      onClick: function onClick() {
-        return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('signup'));
-      }
-    }, "Join"),
+    openModal: function openModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('signup'));
+    },
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_login_form__WEBPACK_IMPORTED_MODULE_5__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_login_form__WEBPACK_IMPORTED_MODULE_4__["default"]));
 
 /***/ }),
 
@@ -595,6 +610,7 @@ function (_React$Component) {
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
+    _this.fadeoutSignup = _this.fadeoutSignup.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -615,13 +631,27 @@ function (_React$Component) {
       };
     }
   }, {
-    key: "render",
-    // errors(){
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      $('.modal-signup').fadeIn(258);
+    }
+  }, {
+    key: "fadeoutSignup",
+    value: function fadeoutSignup() {
+      var _this3 = this;
+
+      $('.modal-signup').fadeOut(256, function () {
+        return _this3.props.openModal();
+      });
+    } // errors(){
     //     // debugger
     //     this.props.errors.map((error) => (
     //         <li>{error[0]}</li>
     //     )) 
     // }
+
+  }, {
+    key: "render",
     value: function render() {
       // const errors = this.props.errors.map((error, idx) => (
       //   <li key={idx} >{error}</li>
@@ -655,7 +685,10 @@ function (_React$Component) {
         id: "demo-login"
       }, "Log in as Demo User"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "session-footer"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Already have an account?"), this.props.otherForm)));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Already have an account?"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "other-form-link",
+        onClick: this.fadeoutSignup
+      }, "Log in"))));
     }
   }]);
 
@@ -702,12 +735,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
     processForm: function processForm(formUser) {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["signupUser"])(formUser));
     },
-    otherForm: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      id: "other-form-link",
-      onClick: function onClick() {
-        return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('login'));
-      }
-    }, "Log in"),
+    openModal: function openModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["openModal"])('login'));
+    },
     closeModal: function closeModal() {
       return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
     }
@@ -1018,6 +1048,8 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])();
   }
+
+  window.getState = store.getState; //for debugging
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store

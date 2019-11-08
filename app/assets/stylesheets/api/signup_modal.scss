@@ -9,9 +9,14 @@
   color: black;
   background-color: white;
   visibility: visible;
-  -webkit-animation-name: fade_in2;
+  -webkit-animation-name: fade_in3;
   -webkit-animation-duration: 0.5s;
-  animation-name: fade_in2;
+  animation-name: fade_in3;
   animation-duration: 0.5s;
   animation-timing-function: linear;
+}
+
+@keyframes fade_in3 {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

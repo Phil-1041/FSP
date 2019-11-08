@@ -11,6 +11,7 @@ class SignupForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.fadeoutSignup = this.fadeoutSignup.bind(this);
   }
 
   handleSubmit(e) {
@@ -25,6 +26,14 @@ class SignupForm extends React.Component {
       this.setState({ [type]: e.target.value })
     };
   };
+
+  componentDidMount(){
+    $('.modal-signup').fadeIn(258)
+  }
+
+  fadeoutSignup() {
+    $('.modal-signup').fadeOut(256, () => this.props.openModal())
+  }
 
   // errors(){
   //     // debugger
@@ -53,7 +62,9 @@ class SignupForm extends React.Component {
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
-            <span>Already have an account?</span>{this.props.otherForm}
+            <span>Already have an account?</span> <button id='other-form-link' onClick={this.fadeoutSignup}>
+              Log in
+            </button>
           </div>
         </form>
       </div>

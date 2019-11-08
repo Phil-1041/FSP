@@ -10,6 +10,7 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.fadeoutLogin = this.fadeoutLogin.bind(this);
   }
 
   handleSubmit(e) {
@@ -24,6 +25,14 @@ class LoginForm extends React.Component {
       this.setState({ [type]: e.target.value })
     };
   };
+
+  componentDidMount() {
+    $('.modal-login').fadeIn(258)
+  }
+
+  fadeoutLogin() {
+    $('.modal-login').fadeOut(256, () => this.props.openModal())
+  }
 
   // errors(){
   //     // debugger
@@ -51,7 +60,10 @@ class LoginForm extends React.Component {
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
-            <span>Don't have an account?</span>{this.props.otherForm}
+            <span>Don't have an account?</span>
+            <button id='other-form-link' onClick={this.fadeoutLogin}>
+              Join
+            </button>
           </div>
         </form>
       </div>

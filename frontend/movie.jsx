@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+  window.getState = store.getState //for debugging
   ReactDom.render(<Root store={store}>React Is Working</Root>, root)
 })
