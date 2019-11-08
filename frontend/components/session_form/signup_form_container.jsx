@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { signupUser } from '../../actions/session_actions'
 import { openModal, closeModal } from '../../actions/modal_actions'
-import SessionForm from './session_form';
+import SignupForm from './signup_form';
+import { SIGBREAK } from 'constants';
 
 const mapStateToProps = (state, ownProps) => ({
   // errors: state.errors.session,
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   closeModal: () => dispatch(closeModal())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm)
+export default connect(mapStateToProps, mapDispatchToProps)(SignupForm)

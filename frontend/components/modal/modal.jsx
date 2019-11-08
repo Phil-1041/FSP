@@ -3,6 +3,7 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container'
 import SignupFormContainer from '../session_form/signup_form_container'
+import SignupForm from '../session_form/signup_form';
 
 
 class Modal extends React.Component {
@@ -15,26 +16,23 @@ class Modal extends React.Component {
     if(!this.props.modal) {
       // debugger
       return null;
-    }
-    let component
-    switch (this.props.modal) {
-    case 'login':
-      component = <LoginFormContainer />;
-      break;
-    case 'signup':
-      component = <SignupFormContainer />;
-      break;
-    default:
-      return null;
-    }
-        
-    return (
-      <div className="modal-background" onClick={this.slowExit}>
-        <div className="modal-child" onClick={e => e.stopPropagation()}>
-          {component}
-        </div>
+    } else if(this.props.modal=='login'){
+      return (
+        <div className="modal-background" onClick={this.slowExit}>
+          <div className="modal-login" onClick={e => e.stopPropagation()}>
+            <LoginFormContainer />;
+          </div>
+        </div> 
+      );
+    } else {
+      return (
+        <div className="modal-background" onClick={this.slowExit}>
+          <div className="modal-signup" onClick={e => e.stopPropagation()}>
+            <SignupFormContainer />;
+          </div>
       </div> 
-    );
+      );
+    }
   }
   slowExit () {
     $('.modal-background').fadeOut(256, 

@@ -15,7 +15,8 @@
  */
 
 @import './reset.scss';
-@import './api/modal.scss';
+@import './api/login_modal.scss';
+@import './api/signup_modal.scss';
 @import './api/splash.scss';
 @import './api/front_nav.scss';
 @import './api//session_form.scss';

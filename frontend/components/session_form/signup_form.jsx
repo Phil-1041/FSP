@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       name: "",
+      email: "",
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
-    this.whatform = this.whatform.bind(this);
   }
 
   handleSubmit(e) {
@@ -26,29 +26,6 @@ class SessionForm extends React.Component {
     };
   };
 
-  whatform() {
-    if (this.props.formType === 'login') {
-      return 'Log in to Movie'
-    } else {
-      return 'Join Movie'
-    }
-  }
-
-  whatFooter() {
-    if (this.props.formType === 'login') {
-      return 'Don\'t have an account?'
-    } else {
-      return 'Already have an account?'
-    }
-  }
-
-  whatButton(){
-    if (this.props.formType === 'login') {
-      return 'Log in with email'
-    } else {
-      return 'Join with email'
-    }
-  }
   // errors(){
   //     // debugger
   //     this.props.errors.map((error) => (
@@ -62,20 +39,21 @@ class SessionForm extends React.Component {
     // ))
     return (
       <div>
-        <p id='session-title'>{this.whatform()}</p>
+        <p id='session-title'>Join Movie</p>
 
         {/* <ul className="errors">{errors}
         </ul> */}
 
         <form className="session_form">
           <input type="text" value={this.state.name} onChange={this.handleInput('name')} />
+          <input type="text" value={this.state.email} onChange={this.handleInput('email')} />
           <input type="password" value={this.state.password} onChange={this.handleInput('password')} />
           <p className='text'>Forgot your password?</p>
-          <input id='email-login' type="submit" value={this.whatButton()} onClick={this.handleSubmit} />
+          <input id='email-login' type="submit" value='Join with email' onClick={this.handleSubmit} />
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
-            <span>{this.whatFooter()}</span>{this.props.otherForm}
+            <span>Already have an account?</span>{this.props.otherForm}
           </div>
         </form>
       </div>
@@ -85,4 +63,4 @@ class SessionForm extends React.Component {
 
 }
 
-export default SessionForm;
+export default SignupForm;

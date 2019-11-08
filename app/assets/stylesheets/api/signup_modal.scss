@@ -1,0 +1,17 @@
+.modal-signup {
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: 500px;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation-name: fade_in2;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade_in2;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
