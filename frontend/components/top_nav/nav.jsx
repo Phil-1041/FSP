@@ -9,10 +9,10 @@ class Nav extends React.Component {
           <ul className="left_nav">
             <Link to="/"><i id="logo"></i></Link>
             <li>
-              <button id='join'>Join</button>
+              <button id='join' onClick={() => this.props.openModal('signup')}>Join</button>
             </li>
             <li >
-              <button id='login'>Log in</button>
+              <button id='login' onClick={() => this.props.openModal('login')}>Log in</button>
             </li>
             <li id="insp_dropdown">
               <button id='inspiration'>Inspiration<img src="https://i.ibb.co/fDZPFkR/angle-pointing-down.png"/></button>

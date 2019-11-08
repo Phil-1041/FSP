@@ -8,13 +8,17 @@ import Modal from './modal/modal'
 
 const App = () => (
   <div>
-    {/* <Modal /> */}
+    <Modal />
     <header>
-      {/* <NavContainer /> */}
+      <NavContainer />
     </header>
     <Switch>
       <Route path='/log_in' component={LoginFormContainer} />
-      {/* <Route path='/' component={Splash} /> */}
+      <Route path='/linkedin' component={() => {
+        window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';
+        return null;
+      }} />
+      <Route path='/' component={Splash} />
     </Switch>
   </div>
 );

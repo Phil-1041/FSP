@@ -15,5 +15,6 @@
  */
 
 @import './reset.scss';
+@import './api/modal.scss';
 @import './api/splash.scss';
-@import './api/sessions.scss';
+@import './api/front_nav.scss';
