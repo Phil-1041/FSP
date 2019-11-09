@@ -19,7 +19,7 @@ class Modal extends React.Component {
       return (
         <div className="modal-background" onClick={this.slowExit}>
           <div className="modal-login" onClick={e => e.stopPropagation()}>
-            <LoginFormContainer />;
+            <LoginFormContainer />
           </div>
         </div> 
       );
@@ -27,7 +27,7 @@ class Modal extends React.Component {
       return (
         <div className="modal-background" onClick={this.slowExit}>
           <div className="modal-signup" onClick={e => e.stopPropagation()}>
-            <SignupFormContainer />;
+            <SignupFormContainer />
           </div>
       </div> 
       );

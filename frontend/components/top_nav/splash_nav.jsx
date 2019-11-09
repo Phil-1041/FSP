@@ -43,7 +43,7 @@ class splashNav extends React.Component {
               </button>
             </li>
             <li>
-              <button id="upload">
+              <button id="upload" onClick={() => this.props.openModal('signup')}>
                 <img src="https://image.flaticon.com/icons/svg/20/20829.svg"/> Upload
               </button>
             </li>

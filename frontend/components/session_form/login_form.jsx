@@ -11,11 +11,23 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.fadeoutLogin = this.fadeoutLogin.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.loginUser(user)
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push('/home'))
+  }
+
+  loginDemoUser() {
+    const demoLogin = {
+      email: 'demo@email.com',
+      password: 'movieo'
+    }
+    const user = Object.assign({}, demoLogin);
     this.props.loginUser(user)
       .then(() => this.props.closeModal())
       .then(() => this.props.history.push('/home'))
@@ -65,7 +77,7 @@ class LoginForm extends React.Component {
             Log in with email
           </button>
           <p className='text'>or</p>
-          <button id='demo-login'>Log in as Demo User</button>
+          <button id='demo-login' onClick={this.loginDemoUser}>Log in as Demo User</button>
           <div id='session-footer'>
             <span>Don't have an account?</span>
             <button id='other-form-link' onClick={this.fadeoutLogin}>

@@ -12,6 +12,7 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.fadeoutSignup = this.fadeoutSignup.bind(this);
+    this.loginDemoUser = this.loginDemoUser.bind(this);
   }
 
   handleSubmit(e) {
@@ -21,6 +22,18 @@ class SignupForm extends React.Component {
       .then(() => this.props.closeModal())
       .then(() => this.props.history.push('/home'));
   }
+
+  loginDemoUser() {
+    const demoLogin = {
+      email: 'demo@email.com',
+      password: 'movieo'
+    }
+    const user = Object.assign({}, demoLogin);
+    this.props.login(user)
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push('/home'))
+  }
+
 
   handleInput(type) {
     return (e) => {
@@ -66,7 +79,7 @@ class SignupForm extends React.Component {
             Join with email
           </button>
           <p className='text'>or</p>
-          <button id='demo-login'>Log in as Demo User</button>
+          <button id='demo-login' onClick={this.loginDemoUser}>Log in as Demo User</button>
           <div id='session-footer'>
             <span>Already have an account?</span> 
             <button id='other-form-link' onClick={this.fadeoutSignup}>
