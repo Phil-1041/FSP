@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { login, signup } from './util/session_api_util';
+import { signup } from './util/session_api_util';
+import { logoutUser, loginUser } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root')
@@ -20,8 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   //debugging remove from window after
+  window.dispatch = store.dispatch
   window.getState = store.getState 
-  window.login = login
+  window.login = loginUser
+  window.logout = logoutUser
   window.signup = signup
   const demoUser = { email: 'demo2@email.com', name: 'demo', password: 'movieo' }
   window.demoUser = demoUser

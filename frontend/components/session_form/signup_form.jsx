@@ -67,7 +67,8 @@ class SignupForm extends React.Component {
           <p className='text'>or</p>
           <button id='demo-login'>Log in as Demo User</button>
           <div id='session-footer'>
-            <span>Already have an account?</span> <button id='other-form-link' onClick={this.fadeoutSignup}>
+            <span>Already have an account?</span> 
+            <button id='other-form-link' onClick={this.fadeoutSignup}>
               Log in
             </button>
           </div>

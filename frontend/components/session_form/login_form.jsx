@@ -16,9 +16,9 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    // debugger
     this.props.loginUser(user)
-      .then(() => this.props.history.push('/log_in'));
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push('/home'))
   }
 
   handleInput(type) {
