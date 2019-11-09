@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Home from './user_home';
+import { logoutUser } from '../../actions/session_actions';
 
 const mapStateToProps = ({ entities: { users }, session }) => {
   return ({
@@ -8,7 +9,7 @@ const mapStateToProps = ({ entities: { users }, session }) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  somethinghere: null //remove, this is placeholder
+  logout: () => dispatch(logoutUser())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -48,13 +48,17 @@
 .submit-form {
   color: white;
   font-weight: bold;
-  background-color: rgb(126,195,0);
+  background-color: #7ec300;
   border-radius: 3px;
   margin: 0px;
   box-sizing: border-box;
   height: 50px;
   width: 100%;
   font-size: 16px;
+}
+
+.submit-form:hover {
+  background-color: #5a9d03;
 }
 
 .session_form .text:last-of-type {
@@ -75,6 +79,10 @@
   font-size: 16px;
   padding: 10px;
   border-radius: 3px;
+}
+
+#demo-login:hover {
+  background-color: #2e579d;
 }
 
 .session_form #session-footer {

@@ -18,7 +18,8 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user)
-      .then(this.props.history.push("/"));
+      .then(() => this.props.closeModal())
+      .then(() => this.props.history.push('/home'));
   }
 
   handleInput(type) {

@@ -283,7 +283,9 @@ function (_React$Component) {
   _createClass(Home, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.users.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "this is Home"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.users.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "this is Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.props.logout
+      }, " Logout "));
     }
   }]);
 
@@ -305,6 +307,8 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _user_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./user_home */ "./frontend/components/index/user_home.jsx");
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+
 
 
 
@@ -318,8 +322,9 @@ var mapStateToProps = function mapStateToProps(_ref) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    somethinghere: null //remove, this is placeholder
-
+    logout: function logout() {
+      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logoutUser"])());
+    }
   };
 };
 
@@ -725,17 +730,23 @@ function (_React$Component) {
   _createClass(SignupForm, [{
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this2 = this;
+
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.processForm(user).then(this.props.history.push("/"));
+      this.props.processForm(user).then(function () {
+        return _this2.props.closeModal();
+      }).then(function () {
+        return _this2.props.history.push('/home');
+      });
     }
   }, {
     key: "handleInput",
     value: function handleInput(type) {
-      var _this2 = this;
+      var _this3 = this;
 
       return function (e) {
-        _this2.setState(_defineProperty({}, type, e.target.value));
+        _this3.setState(_defineProperty({}, type, e.target.value));
       };
     }
   }, {
@@ -746,10 +757,10 @@ function (_React$Component) {
   }, {
     key: "fadeoutSignup",
     value: function fadeoutSignup() {
-      var _this3 = this;
+      var _this4 = this;
 
       $('.modal-signup').fadeOut(256, function () {
-        return _this3.props.openModal();
+        return _this4.props.openModal();
       });
     }
   }, {
