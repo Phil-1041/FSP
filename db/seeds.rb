@@ -5,5 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 
 User.create(name: 'DemoUser', email: 'demo@email.com', password: 'movieo')
+
+Video.create(title: "first video", owner_id: 1).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4"), filename: "mountain.mp4")

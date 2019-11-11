@@ -19,6 +19,7 @@ const App = () => (
     </header>
     <Switch>
       <ProtectedRoute path='/home' component={Home} />
+      {/* <Route path='/videos' component={Video} /> */}
       <Route path='/linkedin' component={() => {
         window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';
         return null;
