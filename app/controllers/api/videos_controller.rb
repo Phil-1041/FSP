@@ -5,7 +5,7 @@ class Api::VideosController < ApplicationController
   end
 
   def index
-    @videos = Video.all
+    @videos = Video.all #Video.all.include(s)(:likes).include(:comments)
   end
 
   private

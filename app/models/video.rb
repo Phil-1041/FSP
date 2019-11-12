@@ -7,5 +7,6 @@ class Video < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-  
+  #has_many likes/comments
+
 end

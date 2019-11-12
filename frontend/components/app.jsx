@@ -6,6 +6,7 @@ import SplashNavContainer from './top_nav/splash_nav_container';
 import AuthNavContainer from './top_nav/auth_nav_container';
 import Modal from './modal/modal'
 import Home from './index/user_home_container';
+import Video from './video/index_container';
 
 
 const App = () => (
@@ -19,7 +20,7 @@ const App = () => (
     </header>
     <Switch>
       <ProtectedRoute path='/home' component={Home} />
-      {/* <Route path='/videos' component={Video} /> */}
+      <Route path='/videos' component={Video} />
       <Route path='/linkedin' component={() => {
         window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';
         return null;
