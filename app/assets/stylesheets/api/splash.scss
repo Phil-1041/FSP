@@ -1,6 +1,6 @@
 #base {
   margin-top: 90px;
-  height: 5000px;
+  height: 2000px;
   background-image: linear-gradient(#F2F9FF,white);
   display: flex;
   flex-direction: column;
@@ -68,17 +68,27 @@ h3 {
 }
 
 #video-wrapper {
+  position: relative;
+  top: 300px;
+  width: 70%;
   display: flex;
   justify-content: center;
   z-index: 1;
+  // background-image: //first frame;
 }
 
+// #video-wrapper:hover {
+//   transform: translate(-300px,500px);
+// }
+
+
 #splash-video{
-  position: relative;
-  top: 170px;
+  // position: relative;
+  // top: 170px;
+  position: absolute;
   border-radius: 3px;
+  width: 85%;
   box-sizing: border-box;
-  width: 80%;
   max-width: 1500px;
   height: auto;
   text-align: center;

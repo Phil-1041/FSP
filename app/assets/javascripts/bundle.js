@@ -977,9 +977,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -1000,12 +1000,20 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Splash).call(this, props));
     _this.state = {};
+    _this.slideVideo = _this.slideVideo.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Splash, [{
+    key: "slideVideo",
+    value: function slideVideo() {
+      console.log(window.scrollY);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "base"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1021,6 +1029,9 @@ function (_React$Component) {
       }, "See portfolio")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "video-wrapper"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        onScroll: function onScroll() {
+          return _this2.slideVideo();
+        },
         id: "splash-video",
         src: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4",
         type: "video/mp4",
@@ -1468,7 +1479,91 @@ document.addEventListener('DOMContentLoaded', function () {
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
-  }, "React Is Working"), root);
+  }, "React Is Working"), root); /// splash video movement ///
+
+  window.addEventListener('scroll', EventDown); //initial state
+
+  function EventDown() {
+    var latestKnownScrollY = window.scrollY;
+    console.log(latestKnownScrollY); // debug remove
+
+    if (latestKnownScrollY > 500) {
+      window.removeEventListener('scroll', EventDown); //removes event listener
+
+      slideVideoDown(); //slides video down
+
+      addEventUp(); //adds event for up
+    }
+  }
+
+  function slideVideoDown() {
+    var id = setInterval(frame, 5);
+    var pos = 0;
+    var video = document.getElementById('video-wrapper');
+
+    function frame() {
+      if (pos === 350) {
+        clearInterval(id);
+      } else {
+        pos++;
+        pos++; // debugger
+
+        video.style.top = pos + 'px';
+        video.style.left = pos + 'px';
+      }
+    }
+  }
+
+  function addEventUp() {
+    var video = document.getElementById('video-wrapper');
+    window.addEventListener('scroll', EventUp);
+  }
+
+  function EventUp() {
+    var latestKnownScrollY = window.scrollY;
+
+    if (latestKnownScrollY < 400) {
+      window.removeEventListener('scroll', EventUp); //removes event listener
+
+      slideVideoUp(); //slides video up
+
+      addEventDown(); //adds event for down
+    }
+  }
+
+  function slideVideoUp() {
+    var id = setInterval(frame, 5);
+    var pos = 350;
+    var video = document.getElementById('video-wrapper');
+
+    function frame() {
+      if (pos === 0) {
+        clearInterval(id);
+      } else {
+        pos--; // debugger
+
+        video.style.top = pos + 'px';
+        video.style.left = pos + 'px';
+      }
+    }
+  }
+
+  function addEventDown() {
+    var video = document.getElementById('video-wrapper');
+    window.addEventListener('scroll', EventDown);
+  } /// END Splash Video Movement ///
+  // window.addEventListener('scroll', () => {
+  //   let latestKnownScrollY = window.scrollY
+  //   console.log(latestKnownScrollY)
+  //   if(latestKnownScrollY === 500){
+  //     console.log('should slide')
+  //     slideVideoDown()
+  //   } else if ( latestKnownScrollY === 550 ) {
+  //     console.log('up')
+  //     slideVideoUp()
+  //   }
+  // })
+
 });
 
 /***/ }),
