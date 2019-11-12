@@ -10,13 +10,14 @@ class Show extends React.Component {
   render(){
     const {videos} = this.props
     if (!videos) return null //loading ICON later
-    debugger
     return (
       <div>
         <h1>A video</h1>
         {
           videos.map( video => (
-            <video src={video.url}></video>
+            <video width="500" height="400" autoPlay muted>
+              <source src={video.url} type="video/mp4"></source>
+            </video>
             )
           )
         }

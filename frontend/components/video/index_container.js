@@ -13,4 +13,4 @@ const mapDispatchToProps = dispatch => ({
   fetchVideos: () => dispatch(fetchVideos())
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Show)
+export default connect(mapStateToProps, mapDispatchToProps)(Index)

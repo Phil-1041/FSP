@@ -1019,10 +1019,17 @@ function (_React$Component) {
       }, "My Linkedin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "portfolio_splash"
       }, "See portfolio")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "center_main"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        id: "video-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        id: "splash-video",
+        src: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4",
+        type: "video/mp4",
+        loop: true,
+        autoPlay: true,
+        muted: true
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"
-      })));
+      }));
     }
   }]);
 
@@ -1345,11 +1352,16 @@ function (_React$Component) {
       var videos = this.props.videos;
       if (!videos) return null; //loading ICON later
 
-      debugger;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "A video"), videos.map(function (video) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-          src: video.url
-        });
+          width: "500",
+          height: "400",
+          autoPlay: true,
+          muted: true
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+          src: video.url,
+          type: "video/mp4"
+        }));
       }));
     }
   }]);
@@ -1393,7 +1405,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(Show));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
