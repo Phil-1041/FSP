@@ -79,10 +79,10 @@ h3 {
   border-radius: 3px;
   box-sizing: border-box;
   width: 80%;
-  max-width: 1000px;
+  max-width: 1500px;
   height: auto;
   text-align: center;
-  // z-index: 1;
+  // background: first-frame
 }
 
 // #center_main > img {
@@ -93,11 +93,6 @@ h3 {
 //   left: -300px;
 //   z-index: 0;
 // }
-
-#center_main > video {
-  width: inherit;
-  background-color: lightgreen;
-}
 
 #base > img {
   position: absolute;

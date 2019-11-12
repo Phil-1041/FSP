@@ -23095,3 +23095,135 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1014ms (Views: 1008.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-11 18:06:37 -0800
+  [1m[35m (56.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 3035ms (Views: 3027.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:06:41 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (16.7ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T020641Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48ef6cdbb005ce002c7b9e2b0b77775693cf0c3c1f9eb98c452d3d83eaf6950c)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T020641Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=48ef6cdbb005ce002c7b9e2b0b77775693cf0c3c1f9eb98c452d3d83eaf6950c
+Completed 302 Found in 223ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:08:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 294ms (Views: 286.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:08:56 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (4.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T020856Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bc2386c18af73035ad5ead09968d4f1e8ff66485c6a7abe17d64aa2fb3d05807)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T020856Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=bc2386c18af73035ad5ead09968d4f1e8ff66485c6a7abe17d64aa2fb3d05807
+Completed 302 Found in 34ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:09:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 336ms (Views: 334.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:09:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:29:30 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 255ms (Views: 247.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:29:31 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (29.5ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T022931Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2fb995c2f351a721d901a56a82ae67d6103f6f7bf264156f34179b077ec3e8bc)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T022931Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2fb995c2f351a721d901a56a82ae67d6103f6f7bf264156f34179b077ec3e8bc
+Completed 302 Found in 57ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:35:31 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T023531Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5a383db85b5f09cb24cc63e0d4ac52ee68fa80d9c213d11c600dd29338f4ccfd)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T023531Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=5a383db85b5f09cb24cc63e0d4ac52ee68fa80d9c213d11c600dd29338f4ccfd
+Completed 302 Found in 42ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:36:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 268ms (Views: 258.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/videos" for ::1 at 2019-11-11 18:37:26 -0800
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (11.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:2
+  Rendered api/videos/_video.json.jbuilder (1.0ms)
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Video"], ["name", "video"], ["LIMIT", 1]]
+  ↳ app/views/api/videos/index.json.jbuilder:5
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/videos/index.json.jbuilder:5
+  Rendered api/videos/index.json.jbuilder (151.7ms)
+Completed 200 OK in 192ms (Views: 104.7ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:41:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 450ms (Views: 429.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:41:44 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (27.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (13.5ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T024144Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7d70c3bcedf283dcce9d68167e8f014777921ee580a9d110a5b7fafda43c539b)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T024144Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7d70c3bcedf283dcce9d68167e8f014777921ee580a9d110a5b7fafda43c539b
+Completed 302 Found in 52ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-11 18:42:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-11 18:42:02 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (7.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.4ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T024202Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8d9b9a7a068b3142644ad0e506783ba39b66eae5528646f046a2d3a2fb6aaad0)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191112%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191112T024202Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=8d9b9a7a068b3142644ad0e506783ba39b66eae5528646f046a2d3a2fb6aaad0
+Completed 302 Found in 13ms (ActiveRecord: 7.6ms)
+
+
