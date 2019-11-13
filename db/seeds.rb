@@ -7,7 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+User.destroy_all
 
-User.create(name: 'DemoUser', email: 'demo@email.com', password: 'movieo')
+user1 = User.create(name: 'DemoUser', email: 'demo@email.com', password: 'movieo')
 
-Video.create(title: "first video", owner_id: 1).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4"), filename: "mountain.mp4")
+Video.destroy_all
+
+Video.create(title: "first video", owner_id: user1.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4"), filename: "mountain.mp4")
