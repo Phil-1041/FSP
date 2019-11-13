@@ -238,6 +238,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
 /* harmony import */ var _index_user_home_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index/user_home_container */ "./frontend/components/index/user_home_container.js");
 /* harmony import */ var _video_index_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./video/index_container */ "./frontend/components/video/index_container.js");
+/* harmony import */ var _footer_footer__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./footer/footer */ "./frontend/components/footer/footer.jsx");
+
 
 
 
@@ -271,10 +273,36 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["AuthRoute"], {
     path: "/",
     component: _splash_splash_page__WEBPACK_IMPORTED_MODULE_3__["default"]
-  })));
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_footer_footer__WEBPACK_IMPORTED_MODULE_9__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./frontend/components/footer/footer.jsx":
+/*!***********************************************!*\
+  !*** ./frontend/components/footer/footer.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "footer"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://i.ibb.co/5x9hxz0/movie-logo-white.png",
+    alt: "movie_logo"
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
 
 /***/ }),
 
@@ -1027,7 +1055,7 @@ function (_React$Component) {
       }, "My Linkedin")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "portfolio_splash"
       }, "See portfolio")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "video-wrapper"
+        id: "video-wrapper-before"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         onScroll: function onScroll() {
           return _this2.slideVideo();
@@ -1040,7 +1068,15 @@ function (_React$Component) {
         muted: true
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        id: "viewsection"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "content-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Your video."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Your brand.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "inner-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "The world's fastest, most customizable, easily embeddable ad-free player."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/"
+      }, "Learn more \u2192")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "  ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Plans with custom players from ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "$7"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, " Compare plans ")));
     }
   }]);
 
@@ -1487,7 +1523,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var latestKnownScrollY = window.scrollY;
     console.log(latestKnownScrollY); // debug remove
 
-    if (latestKnownScrollY > 500) {
+    if (latestKnownScrollY > 700) {
       window.removeEventListener('scroll', EventDown); //removes event listener
 
       slideVideoDown(); //slides video down
@@ -1497,21 +1533,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function slideVideoDown() {
-    var id = setInterval(frame, 5);
-    var pos = 0;
-    var video = document.getElementById('video-wrapper');
-
-    function frame() {
-      if (pos === 350) {
-        clearInterval(id);
-      } else {
-        pos++;
-        pos++; // debugger
-
-        video.style.top = pos + 'px';
-        video.style.left = pos + 'px';
-      }
-    }
+    document.getElementById('video-wrapper-before').id = 'video-wrapper-after';
   }
 
   function addEventUp() {
@@ -1521,8 +1543,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function EventUp() {
     var latestKnownScrollY = window.scrollY;
+    console.log(latestKnownScrollY);
 
-    if (latestKnownScrollY < 400) {
+    if (latestKnownScrollY < 500) {
       window.removeEventListener('scroll', EventUp); //removes event listener
 
       slideVideoUp(); //slides video up
@@ -1532,37 +1555,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function slideVideoUp() {
-    var id = setInterval(frame, 5);
-    var pos = 350;
-    var video = document.getElementById('video-wrapper');
-
-    function frame() {
-      if (pos === 0) {
-        clearInterval(id);
-      } else {
-        pos--; // debugger
-
-        video.style.top = pos + 'px';
-        video.style.left = pos + 'px';
-      }
-    }
+    document.getElementById('video-wrapper-after').id = 'video-wrapper-before';
   }
 
   function addEventDown() {
     var video = document.getElementById('video-wrapper');
     window.addEventListener('scroll', EventDown);
   } /// END Splash Video Movement ///
-  // window.addEventListener('scroll', () => {
-  //   let latestKnownScrollY = window.scrollY
-  //   console.log(latestKnownScrollY)
-  //   if(latestKnownScrollY === 500){
-  //     console.log('should slide')
-  //     slideVideoDown()
-  //   } else if ( latestKnownScrollY === 550 ) {
-  //     console.log('up')
-  //     slideVideoUp()
-  //   }
-  // })
 
 });
 

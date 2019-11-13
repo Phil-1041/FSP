@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function EventDown() {
     let latestKnownScrollY = window.scrollY
     console.log(latestKnownScrollY) // debug remove
-    if (latestKnownScrollY > 500){
+    if (latestKnownScrollY > 700){
       window.removeEventListener('scroll', EventDown) //removes event listener
       slideVideoDown() //slides video down
       addEventUp() //adds event for up
@@ -48,22 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   function slideVideoDown() {
-    
-    let id = setInterval(frame, 5);
-    let pos = 0;
-    let video = document.getElementById('video-wrapper');
-    
-    function frame() {
-      if (pos === 350) {
-        clearInterval(id)
-      } else {
-        pos ++;
-        pos ++;
-        // debugger
-        video.style.top = pos + 'px';
-        video.style.left = pos + 'px';
-      }
-    }
+    document.getElementById('video-wrapper-before').id = 'video-wrapper-after'
   }
   
   function addEventUp() {
@@ -73,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function EventUp() {
     let latestKnownScrollY = window.scrollY
-    if (latestKnownScrollY < 400) {
+    console.log(latestKnownScrollY)
+    if (latestKnownScrollY < 500) {
       window.removeEventListener('scroll', EventUp) //removes event listener
       slideVideoUp() //slides video up
       addEventDown() //adds event for down
@@ -81,20 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function slideVideoUp(){
-    let id = setInterval(frame, 5);
-    let pos = 350;
-    let video = document.getElementById('video-wrapper');
-
-    function frame() {
-      if (pos === 0) {
-        clearInterval(id)
-      } else {
-        pos--;
-        // debugger
-        video.style.top = pos + 'px';
-        video.style.left = pos + 'px';
-      }
-    }
+    document.getElementById('video-wrapper-after').id = 'video-wrapper-before'
   }
 
   function addEventDown() {
@@ -105,17 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
 /// END Splash Video Movement ///
 
 
-
-  // window.addEventListener('scroll', () => {
-  //   let latestKnownScrollY = window.scrollY
-  //   console.log(latestKnownScrollY)
-  //   if(latestKnownScrollY === 500){
-  //     console.log('should slide')
-  //     slideVideoDown()
-  //   } else if ( latestKnownScrollY === 550 ) {
-  //     console.log('up')
-  //     slideVideoUp()
-  //   }
-
-  // })
 })

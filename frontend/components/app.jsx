@@ -7,6 +7,7 @@ import AuthNavContainer from './top_nav/auth_nav_container';
 import Modal from './modal/modal'
 import Home from './index/user_home_container';
 import Video from './video/index_container';
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -27,6 +28,9 @@ const App = () => (
       }} />
       <AuthRoute path='/' component={Splash} />
     </Switch>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 

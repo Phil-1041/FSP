@@ -1,0 +1,14 @@
+#footer {
+  position: absolute;
+  bottom: -100;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a2e3b;
+}
+
+#footer img {
+  margin-left: 3vw;
+  height: 80px;
+}
