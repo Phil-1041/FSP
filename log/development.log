@@ -27007,3 +27007,22 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 262ms (Views: 259.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-12 16:30:47 -0800
+  [1m[35m (8.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 3581ms (Views: 3574.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-12 16:30:52 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  [1m[36mActiveStorage::Blob Load (14.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (11.6ms) [0m[34mGenerated URL for file at key: DSHH8sECMReyfGWFLc5yYEf8 (https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191113%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191113T003052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=478b53a99a53957877d5671c5b34e998ec1c0ec2e06b3f48119ce7490a5753ad)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/DSHH8sECMReyfGWFLc5yYEf8?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191113%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191113T003052Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=478b53a99a53957877d5671c5b34e998ec1c0ec2e06b3f48119ce7490a5753ad
+Completed 302 Found in 308ms (ActiveRecord: 153.0ms)
+
+
