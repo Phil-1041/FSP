@@ -10,7 +10,9 @@ require 'open-uri'
 User.destroy_all
 
 user1 = User.create(name: 'DemoUser', email: 'demo@email.com', password: 'movieo')
+user2 = User.create(name: 'Phil Zheng', email: 'phils@gmail.com', password: 'asd123qw')
 
 Video.destroy_all
 
 Video.create(title: "first video", owner_id: user1.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4"), filename: "mountain.mp4")
+Video.create(title: "Black Coast", owner_id: user2.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/XFyGKkXCo4RFHJAL8bkgsvhw"), filename: "black_coast")

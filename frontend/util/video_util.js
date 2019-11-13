@@ -11,3 +11,13 @@ export const videoIndex = () => (
     method: 'GET',
   })
 )
+
+export const videoCreate = (formData) => ( //might have to check what video is here
+  $.ajax({
+    url: `/api/videos`,
+    method: 'POST',
+    data: formData,
+    contentType: false,
+    processData: false
+  })
+)

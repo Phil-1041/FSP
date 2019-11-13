@@ -6,9 +6,10 @@ import SplashNavContainer from './top_nav/splash_nav_container';
 import AuthNavContainer from './top_nav/auth_nav_container';
 import Modal from './modal/modal'
 import Home from './index/user_home_container';
-import Video from './video/index_container';
+import videoIndex from './video/index_container';
+import videoShow from './video/show_container';
+import videoUpload from './upload/video_upload_container';
 import Footer from './footer/footer';
-
 
 const App = () => (
   <div>
@@ -21,7 +22,9 @@ const App = () => (
     </header>
     <Switch>
       <ProtectedRoute path='/home' component={Home} />
-      <Route path='/videos' component={Video} />
+      <Route exact path='/videos' component={videoIndex} />
+      <Route exact path='/video/upload' component={videoUpload} />
+      <Route path='/video/:videoId' component={videoShow} />
       <Route path='/linkedin' component={() => {
         window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';
         return null;

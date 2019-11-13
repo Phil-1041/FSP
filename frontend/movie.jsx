@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function EventDown() {
     let latestKnownScrollY = window.scrollY
-    console.log(latestKnownScrollY) // debug remove
+    // console.log(latestKnownScrollY) // debug remove
     if (latestKnownScrollY > 700){
       window.removeEventListener('scroll', EventDown) //removes event listener
       slideVideoDown() //slides video down
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   function EventUp() {
     let latestKnownScrollY = window.scrollY
-    console.log(latestKnownScrollY)
+    // console.log(latestKnownScrollY)
     if (latestKnownScrollY < 500) {
       window.removeEventListener('scroll', EventUp) //removes event listener
       slideVideoUp() //slides video up
