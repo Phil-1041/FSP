@@ -1676,12 +1676,17 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var preview = this.state.videoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-        src: this.state.videoUrl
-      }) : null;
+      if (this.state.videoUrl) {
+        document.getElementById('preview').src = this.state.videoUrl;
+      } // const preview = this.state.videoUrl ? <video id="preview" src={this.state.videoUrl}></video> : null;
+
+
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "upload-page"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "upload-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Video Preview"), preview, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        id: "preview",
         src: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit.bind(this)
@@ -1694,10 +1699,11 @@ function (_React$Component) {
         onChange: this.handleInput('title')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "video-desc"
-      }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        value: this.state.description,
+      }, "Description"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
         id: "video-desc",
+        value: this.state.description,
+        cols: "60",
+        rows: "5",
         onChange: this.handleInput('description')
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "video-priv"
@@ -1706,13 +1712,17 @@ function (_React$Component) {
         value: this.state.privacy,
         id: "video-priv",
         onChange: this.handleInput('privacy')
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        className: "fileContainer"
+      }, "Choose a file", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "inputfile",
         type: "file",
         onChange: this.handleFile.bind(this)
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        id: "upload-video-button",
         type: "submit",
         value: "Upload Video"
-      })));
+      }))));
     }
   }]);
 

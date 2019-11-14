@@ -52,32 +52,39 @@ class videoUpload extends React.Component {
   }
 
   render() {
-    const preview = this.state.videoUrl ? <video src={this.state.videoUrl}></video> : null;
+    if(this.state.videoUrl) {
+      document.getElementById('preview').src = this.state.videoUrl
+    }
+    // const preview = this.state.videoUrl ? <video id="preview" src={this.state.videoUrl}></video> : null;
     return (
-      <div id="upload-form">
-        <h3>Video Preview</h3>
-        {preview}
-        <br/>
-        <video src=""></video>
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <label htmlFor="video-title">Title</label>
-          <input type="text" value={this.state.title} id="video-title" 
-            onChange={this.handleInput('title')}/>
+      <div id="upload-page">
 
-          <label htmlFor="video-desc">Description</label>
-          <input type="text" value={this.state.description} id="video-desc" 
-            onChange={this.handleInput('description')}/>
+        <div id="upload-form">
+          <video id= "preview" src=""></video>
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <label htmlFor="video-title">Title</label>
+            <input type="text" value={this.state.title} id="video-title" 
+              onChange={this.handleInput('title')}/>
 
-          <label htmlFor="video-priv">Privacy</label>
-          <input type="text" value={this.state.privacy} id="video-priv" 
-            onChange={this.handleInput('privacy')}/>
+            <label htmlFor="video-desc">Description</label>
+            <textarea id="video-desc" value={this.state.description}
+              cols="60" rows="5" onChange={this.handleInput('description')}></textarea>
 
-          <input type="file"
-            onChange={this.handleFile.bind(this)}
-          />
-          
-          <input type="submit" value="Upload Video"/>
-        </form>
+            <label htmlFor="video-priv">Privacy</label>
+            <input type="text" value={this.state.privacy} id="video-priv" 
+              onChange={this.handleInput('privacy')}/>
+
+            <label className="fileContainer">
+              Choose a file
+              <input className="inputfile" type="file"
+                onChange={this.handleFile.bind(this)}
+                />
+            </label>
+            
+            <input id="upload-video-button" type="submit" value="Upload Video"/>
+          </form>
+        </div>
+
       </div>
     )
   }
