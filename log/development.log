@@ -30780,3 +30780,78 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 102ms (Views: 95.5ms | ActiveRecord: 4.1ms)
 
 
+Started DELETE "/api/session" for ::1 at 2019-11-13 17:31:18 -0800
+Started DELETE "/api/session" for ::1 at 2019-11-13 17:31:18 -0800
+  [1m[35m (42.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (42.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#destroy as JSON
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tgZTFAElxiumWLCgocGCdw"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "tgZTFAElxiumWLCgocGCdw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4VeRUnOOMSVmGPUUdohVcg"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LQWa4pWb9RGOJCYvfQQksQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:66
+  ↳ app/models/user.rb:66
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:50
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["name", "DemoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:50
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["name", "DemoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:50
+  [1m[36mUser Update (3.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "4VeRUnOOMSVmGPUUdohVcg"], ["updated_at", "2019-11-14 01:31:19.411545"], ["id", 1]]
+  ↳ app/models/user.rb:50
+  [1m[35m (45.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:50
+  [1m[36mUser Update (49.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "LQWa4pWb9RGOJCYvfQQksQ"], ["updated_at", "2019-11-14 01:31:19.413562"], ["id", 1]]
+  ↳ app/models/user.rb:50
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (4.1ms)
+Completed 200 OK in 164ms (Views: 33.2ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" for ::1 at 2019-11-13 17:31:19 -0800
+Processing by ActiveStorage::BlobsController#show as MP4
+  [1m[35m (271.1ms)[0m  [1m[35mCOMMIT[0m
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095", "filename"=>"mountain"}
+  ↳ app/models/user.rb:50
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (8.2ms)
+Completed 200 OK in 413ms (Views: 21.6ms | ActiveRecord: 352.0ms)
+
+
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/Phil/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (9.2ms) [0m[34mGenerated URL for file at key: kEbDfRcdSeezYigfaZUun5oM (https://movie-dev.s3.us-west-1.amazonaws.com/kEbDfRcdSeezYigfaZUun5oM?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191114%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191114T013119Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a2a546bd2470ce34dd7f28a51a8460ac2de7147e4b2077f0a664b80c70a6ba42)[0m
+Redirected to https://movie-dev.s3.us-west-1.amazonaws.com/kEbDfRcdSeezYigfaZUun5oM?response-content-disposition=attachment%3B%20filename%3D%22mountain.mp4%22%3B%20filename%2A%3DUTF-8%27%27mountain.mp4&response-content-type=video%2Fmp4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAULARLGN27K4JGJOC%2F20191114%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20191114T013119Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a2a546bd2470ce34dd7f28a51a8460ac2de7147e4b2077f0a664b80c70a6ba42
+Completed 302 Found in 202ms (ActiveRecord: 15.4ms)
+
+
+Started POST "/api/session" for ::1 at 2019-11-13 17:31:25 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@email.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "gqJzaYnulIyVHaqbG59xnQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:66
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:50
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["name", "DemoUser"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:50
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "gqJzaYnulIyVHaqbG59xnQ"], ["updated_at", "2019-11-14 01:31:26.070329"], ["id", 1]]
+  ↳ app/models/user.rb:50
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:50
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 305ms (Views: 19.7ms | ActiveRecord: 17.9ms)
+
+
