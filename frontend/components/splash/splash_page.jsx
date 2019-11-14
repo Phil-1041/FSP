@@ -70,7 +70,8 @@ class Splash extends React.Component {
         </div>
 
         <div id="video-wrapper-before" >
-          <video id="splash-video" onScroll={() => this.slideVideo()} src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" type="video/mp4" loop autoPlay muted></video>
+          <video id="splash-video" onScroll={() => this.slideVideo()} 
+            src="https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4" type="video/mp4" loop autoPlay muted></video>
         </div>
         
         <img src="https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"/>
