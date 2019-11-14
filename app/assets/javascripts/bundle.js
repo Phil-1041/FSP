@@ -407,7 +407,10 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, this.props.users.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "this is Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "logout",
         onClick: this.props.logout
-      }, " Logout "));
+      }, " Logout "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        src: "https://movie-dev.s3-us-west-1.amazonaws.com/VDKc8WRABx71t4QEtVSopr5C",
+        controls: true
+      }));
     }
   }]);
 
@@ -1239,11 +1242,11 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         id: "auth-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        id: "left-nav"
+        id: "auth-left"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/home"
       }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        id: "logo"
+        id: "auth-logo"
       }), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "nav-button"
       }, "Manage videos", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1289,7 +1292,7 @@ function (_React$Component) {
       }, "Link 4"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "nav-button"
       }, "Upgrade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "right_nav"
+        id: "auth-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "search"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1875,7 +1878,9 @@ function (_React$Component) {
           videoID = _this$props.videoID,
           video = _this$props.video;
       if (!video) return null;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, video.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "show-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, video.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "main-video",
         src: video.url,
         autoPlay: true,

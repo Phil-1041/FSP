@@ -6,8 +6,8 @@ class AuthNav extends React.Component {
   render(){
     return(
       <nav id="auth-nav">
-        <ul id="left-nav">
-          <Link to="/home"> <i id="logo"></i> </Link>
+        <ul id="auth-left">
+          <Link to="/home"> <i id="auth-logo"></i> </Link>
           <li>
             <button className="nav-button">Manage videos
               <ul>
@@ -44,7 +44,7 @@ class AuthNav extends React.Component {
           </li>
         </ul>
 
-        <ul className="right_nav">
+        <ul id="auth-right">
           <li>
             <button id="search">
               <img id="search_icon" src="https://i.ibb.co/64jNbzD/thin-finder.png" />

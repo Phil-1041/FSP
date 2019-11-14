@@ -12,7 +12,7 @@ class VideoShow extends React.Component {
     let {videoID, video} = this.props
     if(!video) return null
     return (
-      <div>
+      <div id="show-body">
         <h1>{video.title}</h1>
         <video id="main-video" src={video.url} autoPlay controls></video>
       </div>

@@ -1,3 +1,31 @@
 #auth-nav {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: #eef1f2;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right,  
+    #2c90fc 0%,
+    #b8fd33 25%,
+    #fec837 50%, 
+    #fd1892 75%,
+    #b827fc 100%
+  );
+  border-image-slice: 1;
+}
+
+#auth-left {
+  display: flex;
+}
+
+#auth-logo {
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  // background: url("https://movie-dev.s3-us-west-1.amazonaws.com/movie_logo_noback_blue.png");
+}
+
+#auth-right {
+  display: flex;
 }
