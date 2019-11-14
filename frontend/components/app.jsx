@@ -23,7 +23,7 @@ const App = () => (
     <Switch>
       <ProtectedRoute path='/home' component={Home} />
       <Route exact path='/videos' component={videoIndex} />
-      <Route exact path='/video/upload' component={videoUpload} />
+      <Route exact path='/upload' component={videoUpload} />
       <Route path='/video/:videoId' component={videoShow} />
       <Route path='/linkedin' component={() => {
         window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';

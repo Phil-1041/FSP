@@ -10,6 +10,7 @@ class Home extends React.Component {
           <h2>this is Home</h2>
           <button id="logout" onClick={this.props.logout}> Logout </button>
           <video src="https://movie-dev.s3-us-west-1.amazonaws.com/VDKc8WRABx71t4QEtVSopr5C" controls></video>
+          <left-nav />
         </div>
     )
   }

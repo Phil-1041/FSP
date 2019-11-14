@@ -310,7 +310,7 @@ var App = function App() {
     component: _video_index_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/video/upload",
+    path: "/upload",
     component: _upload_video_upload_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/video/:videoId",
@@ -414,7 +414,7 @@ function (_React$Component) {
       }, " Logout "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         src: "https://movie-dev.s3-us-west-1.amazonaws.com/VDKc8WRABx71t4QEtVSopr5C",
         controls: true
-      }));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("left-nav", null));
     }
   }]);
 
@@ -1241,9 +1241,9 @@ function (_React$Component) {
   _createClass(AuthNav, [{
     key: "render",
     value: function render() {
-      var _this = this;
-
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "top-nav-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
         id: "auth-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         id: "auth-left"
@@ -1315,7 +1315,7 @@ function (_React$Component) {
         to: "/home"
       }, "Link 4"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         id: "upgrade-auth"
-      }, "Upgrade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+      }, "Upgrade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "auth-right"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         id: "search-form"
@@ -1324,15 +1324,35 @@ function (_React$Component) {
         type: "text",
         placeholder: "Search videos, people, and more"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://i.ibb.co/64jNbzD/thin-finder.png"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        id: "upload",
-        onClick: function onClick() {
-          return _this.props.openModal('signup');
-        }
+        id: "search-icon",
+        src: "https://movie-dev.s3-us-west-1.amazonaws.com/magnifying-glass.png"
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "activity"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://image.flaticon.com/icons/svg/20/20829.svg"
-      }), " Upload"))));
+        id: "notification-icon",
+        src: "https://movie-dev.s3-us-west-1.amazonaws.com/alarm-bell.png",
+        alt: "notification-icon"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Activity")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "user"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        id: "smile-icon",
+        src: "https://movie-dev.s3-us-west-1.amazonaws.com/happiness_color.png",
+        alt: "smile-face"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        id: "user-dropdown"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/user"
+      }, "User Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.props.logout
+      }, "Log Out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "upload-link"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        to: "/upload"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "auth-upload"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "https://movie-dev.s3-us-west-1.amazonaws.com/cloud-computing.png"
+      }), " Upload"))))));
     }
   }]);
 
