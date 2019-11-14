@@ -1086,6 +1086,53 @@ function (_React$Component) {
   }
 
   _createClass(Splash, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.addEventListener('scroll', EventDown); //initial state
+
+      function EventDown() {
+        var latestKnownScrollY = window.scrollY; // console.log(latestKnownScrollY) // debug remove
+
+        if (latestKnownScrollY > 700) {
+          window.removeEventListener('scroll', EventDown); //removes event listener
+
+          slideVideoDown(); //slides video down
+
+          addEventUp(); //adds event for up
+        }
+      }
+
+      function slideVideoDown() {
+        document.getElementById('video-wrapper-before').id = 'video-wrapper-after';
+      }
+
+      function addEventUp() {
+        var video = document.getElementById('video-wrapper');
+        window.addEventListener('scroll', EventUp);
+      }
+
+      function EventUp() {
+        var latestKnownScrollY = window.scrollY; // console.log(latestKnownScrollY)
+
+        if (latestKnownScrollY < 500) {
+          window.removeEventListener('scroll', EventUp); //removes event listener
+
+          slideVideoUp(); //slides video up
+
+          addEventDown(); //adds event for down
+        }
+      }
+
+      function slideVideoUp() {
+        document.getElementById('video-wrapper-after').id = 'video-wrapper-before';
+      }
+
+      function addEventDown() {
+        var video = document.getElementById('video-wrapper');
+        window.addEventListener('scroll', EventDown);
+      }
+    }
+  }, {
     key: "slideVideo",
     value: function slideVideo() {
       console.log(window.scrollY);
@@ -1110,10 +1157,10 @@ function (_React$Component) {
       }, "See portfolio")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "video-wrapper-before"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        id: "splash-video",
         onScroll: function onScroll() {
           return _this2.slideVideo();
         },
-        id: "splash-video",
         src: "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4",
         type: "video/mp4",
         loop: true,
@@ -1520,7 +1567,8 @@ function (_React$Component) {
       language: '',
       content_rate: '',
       owner_id: _this.props.session.id,
-      videoFile: null
+      videoFile: null,
+      videoUrl: null
     };
     _this.handleInput = _this.handleInput.bind(_assertThisInitialized(_this));
     return _this;
@@ -1544,9 +1592,13 @@ function (_React$Component) {
       var formData = new FormData();
       formData.append('video[title]', this.state.title);
       formData.append('video[owner_id]', this.state.owner_id);
-      formData.append('video[video]', this.state.videoFile);
+
+      if (this.state.videoFile) {
+        formData.append('video[video]', this.state.videoFile);
+      }
+
       this.props.uploadVideo(formData).then(function (video) {
-        return _this3.props.history.push("/benches/".concat(video.id));
+        return _this3.props.history.push("/video/".concat(video.id));
       }).fail(function (errors) {
         return console.log(errors);
       });
@@ -1554,16 +1606,34 @@ function (_React$Component) {
   }, {
     key: "handleFile",
     value: function handleFile(e) {
-      this.setState({
-        videoFile: e.currentTarget.files[0]
-      });
+      var _this4 = this;
+
+      var file = e.currentTarget.files[0]; // debugger
+
+      var reader = new FileReader();
+
+      reader.onloadend = function () {
+        _this4.setState({
+          videoFile: file,
+          videoUrl: reader.result
+        });
+      };
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
     }
   }, {
     key: "render",
     value: function render() {
+      var preview = this.state.videoUrl ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        src: this.state.videoUrl
+      }) : null;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "upload-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Video Preview"), preview, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        src: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: "video-title"
@@ -1919,52 +1989,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
-  }, "React Is Working"), root); /// splash video movement ///
-
-  window.addEventListener('scroll', EventDown); //initial state
-
-  function EventDown() {
-    var latestKnownScrollY = window.scrollY; // console.log(latestKnownScrollY) // debug remove
-
-    if (latestKnownScrollY > 700) {
-      window.removeEventListener('scroll', EventDown); //removes event listener
-
-      slideVideoDown(); //slides video down
-
-      addEventUp(); //adds event for up
-    }
-  }
-
-  function slideVideoDown() {
-    document.getElementById('video-wrapper-before').id = 'video-wrapper-after';
-  }
-
-  function addEventUp() {
-    var video = document.getElementById('video-wrapper');
-    window.addEventListener('scroll', EventUp);
-  }
-
-  function EventUp() {
-    var latestKnownScrollY = window.scrollY; // console.log(latestKnownScrollY)
-
-    if (latestKnownScrollY < 500) {
-      window.removeEventListener('scroll', EventUp); //removes event listener
-
-      slideVideoUp(); //slides video up
-
-      addEventDown(); //adds event for down
-    }
-  }
-
-  function slideVideoUp() {
-    document.getElementById('video-wrapper-after').id = 'video-wrapper-before';
-  }
-
-  function addEventDown() {
-    var video = document.getElementById('video-wrapper');
-    window.addEventListener('scroll', EventDown);
-  } /// END Splash Video Movement ///
-
+  }, "React Is Working"), root);
 });
 
 /***/ }),

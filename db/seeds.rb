@@ -16,3 +16,5 @@ Video.destroy_all
 
 Video.create(title: "first video", owner_id: user1.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/Drone+Winter+Mountains+4K.mp4"), filename: "mountain.mp4")
 Video.create(title: "Black Coast", owner_id: user2.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/XFyGKkXCo4RFHJAL8bkgsvhw"), filename: "black_coast")
+Video.create(title: "Shy Girl", owner_id: user2.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/wWmr95uWDKZEWWV8nUwVw79k"), filename: "shy_girl")
+Video.create(title: "Sail", owner_id: user1.id).video.attach(io: open("https://movie-dev.s3-us-west-1.amazonaws.com/QT8JgUvYmYjTeCPpJE8CtZRY"), filename: "sail")

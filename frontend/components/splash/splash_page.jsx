@@ -9,6 +9,48 @@ class Splash extends React.Component {
     this.slideVideo = this.slideVideo.bind(this);
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', EventDown) //initial state
+
+    function EventDown() {
+      let latestKnownScrollY = window.scrollY
+      // console.log(latestKnownScrollY) // debug remove
+      if (latestKnownScrollY > 700) {
+        window.removeEventListener('scroll', EventDown) //removes event listener
+        slideVideoDown() //slides video down
+        addEventUp() //adds event for up
+      }
+    }
+
+    function slideVideoDown() {
+      document.getElementById('video-wrapper-before').id = 'video-wrapper-after'
+    }
+
+    function addEventUp() {
+      let video = document.getElementById('video-wrapper');
+      window.addEventListener('scroll', EventUp)
+    }
+
+    function EventUp() {
+      let latestKnownScrollY = window.scrollY
+      // console.log(latestKnownScrollY)
+      if (latestKnownScrollY < 500) {
+        window.removeEventListener('scroll', EventUp) //removes event listener
+        slideVideoUp() //slides video up
+        addEventDown() //adds event for down
+      }
+    }
+
+    function slideVideoUp() {
+      document.getElementById('video-wrapper-after').id = 'video-wrapper-before'
+    }
+
+    function addEventDown() {
+      let video = document.getElementById('video-wrapper');
+      window.addEventListener('scroll', EventDown)
+    }
+  }
+
   slideVideo(){
     console.log(window.scrollY)
   }
@@ -28,7 +70,7 @@ class Splash extends React.Component {
         </div>
 
         <div id="video-wrapper-before" >
-          <video onScroll={() => this.slideVideo()} id="splash-video" src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" type="video/mp4" loop autoPlay muted></video>
+          <video id="splash-video" onScroll={() => this.slideVideo()} src="/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--466ca1b34cfd1bcdd2cc59f355310d7d5b0cd095/mountain.mp4" type="video/mp4" loop autoPlay muted></video>
         </div>
         
         <img src="https://f.vimeocdn.com/images_v6/lohp/featured-videos/288589686/texture0.jpg"/>

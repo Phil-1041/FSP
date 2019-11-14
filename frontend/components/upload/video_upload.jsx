@@ -12,7 +12,8 @@ class videoUpload extends React.Component {
       language: '',
       content_rate: '',
       owner_id: this.props.session.id,
-      videoFile: null
+      videoFile: null,
+      videoUrl: null
     }
     this.handleInput = this.handleInput.bind(this);
   }
@@ -28,20 +29,36 @@ class videoUpload extends React.Component {
     const formData = new FormData();
     formData.append('video[title]', this.state.title);
     formData.append('video[owner_id]', this.state.owner_id);
-    formData.append('video[video]', this.state.videoFile);
+
+    if(this.state.videoFile) {
+      formData.append('video[video]', this.state.videoFile);
+    }
 
     this.props.uploadVideo(formData)
-      .then((video)=> this.props.history.push(`/benches/${video.id}`))
+      .then((video)=> this.props.history.push(`/video/${video.id}`))
       .fail(errors => console.log(errors))
   }
 
   handleFile(e){
-    this.setState({videoFile: e.currentTarget.files[0]})
+    const file = e.currentTarget.files[0];
+    // debugger
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      this.setState({videoFile: file, videoUrl: reader.result})
+    };
+    if (file) {
+      reader.readAsDataURL(file);
+    }
   }
 
-  render(){
+  render() {
+    const preview = this.state.videoUrl ? <video src={this.state.videoUrl}></video> : null;
     return (
       <div id="upload-form">
+        <h3>Video Preview</h3>
+        {preview}
+        <br/>
+        <video src=""></video>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label htmlFor="video-title">Title</label>
           <input type="text" value={this.state.title} id="video-title" 
