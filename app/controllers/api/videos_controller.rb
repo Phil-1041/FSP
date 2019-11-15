@@ -6,6 +6,7 @@ class Api::VideosController < ApplicationController
 
   def index
     @videos = Video.all #Video.all.include(s)(:likes).include(:comments)
+    render 'api/videos/index'
   end
 
   def create

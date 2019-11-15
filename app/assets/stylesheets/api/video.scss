@@ -1,0 +1,12 @@
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0 , 0, 0.8);
+}
+
+.video-wrapper {
+  position: relative;
+}

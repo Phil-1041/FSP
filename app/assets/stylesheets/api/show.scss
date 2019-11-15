@@ -1,9 +1,136 @@
-#show-body {
-  height: 90vh;
+.show-body {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#main-video {
+
+
+
+
+.container {
+  display: flex;
+  background-color: black;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
   height: 60vh;
   width: 100%;
-  background-color: black;
+  z-index: 5;
+}
+
+.c-video {
+  position: relative;
+  height: 100%;
+  max-width: 1000px;
+}
+
+.video {
+  height: 100%;
+  z-index: 1;
+  outline: none;
+}
+
+// .player-controls {
+//   display: flex;
+//   position: absolute;
+//   width: 100%;
+//   flex-wrap: wrap;
+//   background-color: rgba(0,0,0, 0.8);
+//   top: 550px;
+//   right: -15px;
+// }
+
+// .control-buttons button {
+//   background: none;
+//   border: 0;
+//   outline: 0;
+//   cursor: pointer;
+// }
+
+// .control-buttons button:before {
+//   content: '\f144';
+//   font-family: 'Font Awesome 5 Free';
+//   width: 30px;
+//   height: 30px;
+//   display: inline-block;
+//   font-size: 28px;
+//   color: white;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+
+
+
+.below-video {
+  display: none;
+  box-sizing: content-box;
+  flex-direction: row;
+  justify-content: center;
+  background-color: green;
+  width: 1500px;
+  height: 100vh;
+}
+
+.left-wrapper {
+  display: block;
+  width: 70%;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-section {
+  background-color: lightcoral;
+}
+
+.bottom-section {
+  height: 30%;
+  background-color: lightcyan;
+}
+
+.right-wrapper {
+  display: flex;
+  background-color: lightblue;
+  width: 30%;
+}
+
+.video-description {
+  width: 1200px;
+  height: 100%;
+}
+
+.top-section {
+  border-bottom: 1px solid #D0D8DB;
+}
+
+.title {
+  box-sizing: border-box;
+  color: rgb(26, 46, 59);
+  font-size: 2.25rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  line-height: 1.1111;
+}
+
+.owner {
+  color: #1a2e3b;
+  font-weight: 600;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: .875rem;
+  line-height: 1.42857;
+  letter-spacing: .01rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.comments-wrapper {
+  display: block;
+  height: 30%;
+  background-color: lightyellow;
 }

@@ -1,0 +1,2293 @@
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#top-nav-wrapper {
+  position: fixed;
+  border-bottom: 1px solid #D0D8DB;
+  width: 100%;
+  height: 61px;
+  box-sizing: border-box;
+  z-index: 400;
+}
+
+/* line 10, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #eef1f2;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #2c90fc 0%, #b8fd33 25%, #fec837 50%, #fd1892 75%, #b827fc 100%);
+  border-image-slice: 1;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+/* line 29, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#movie-logo {
+  width: 100px;
+  margin-left: 30px;
+  margin-right: 8px;
+  padding: 10px 0;
+}
+
+/* line 43, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-left button {
+  display: flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  text-align: center;
+  color: #607680;
+  white-space: nowrap;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 50px;
+  margin: 0 1px;
+  background-color: inherit;
+}
+
+/* line 58, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-left button ul {
+  display: none;
+  position: absolute;
+  top: 52px;
+  background-color: white;
+  min-width: 125px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-family: Helvetica;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 10px 0;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+.chevron-icon {
+  height: 8px;
+  width: 8px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #a6c5d3);
+  margin: 0;
+  margin-left: 3px;
+  padding: 0;
+}
+
+/* line 83, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#dD1 {
+  left: 170px;
+  padding: 0 0;
+}
+
+/* line 88, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+.dropdown-menu li {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  color: #1a2e3b;
+  width: 120px;
+  font-size: .875rem;
+  line-height: 1.4285714286;
+  letter-spacing: .01rem;
+  margin-bottom: 0;
+  display: block;
+  overflow: hidden;
+  padding: 4px 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-transition: background-color 80ms;
+  transition: background-color 80ms;
+  box-sizing: border-box;
+}
+
+/* line 107, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+.dropdown-menu a {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #1a2e3b;
+}
+
+/* line 115, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+.dropdown-menu li:hover {
+  background-color: #eef1f2;
+}
+
+/* line 119, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#manage-videos ul {
+  left: 140px;
+}
+
+/* line 123, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#watch ul {
+  left: 238px;
+}
+
+/* line 127, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#solutions-auth ul {
+  left: 330px;
+}
+
+/* line 131, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#manage-videos:hover {
+  color: black;
+}
+
+/* line 135, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#manage-videos:hover .chevron-icon {
+  filter: none;
+}
+
+/* line 139, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#manage-videos:hover ul {
+  display: flex;
+}
+
+/* line 143, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#watch:hover ul {
+  display: flex;
+}
+
+/* line 147, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#watch:hover {
+  color: black;
+}
+
+/* line 151, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#watch:hover .chevron-icon {
+  filter: none;
+}
+
+/* line 155, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#solutions-auth:hover ul {
+  display: flex;
+}
+
+/* line 159, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#solutions-auth:hover {
+  color: black;
+}
+
+/* line 163, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#solutions-auth:hover .chevron-icon {
+  filter: none;
+}
+
+/* line 167, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#upgrade-auth:hover {
+  color: black;
+}
+
+/* line 171, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 475px;
+  margin-right: 30px;
+}
+
+/* line 181, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#search-form {
+  display: flex;
+  justify-content: baseline;
+  align-items: flex-end;
+  border-radius: 3px;
+  border: 1px solid #D0D8DB;
+  box-shadow: none;
+  background-color: white;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+
+/* line 195, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#search-form:hover {
+  border-color: gray;
+}
+
+/* line 199, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#search-form:hover #search-icon {
+  filter: opacity(0.8);
+}
+
+/* line 203, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-search {
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  width: 220px;
+  height: 90%;
+  font-size: 14px;
+  color: #4E5A5E;
+  padding-right: 3px;
+}
+
+/* line 214, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-search::placeholder {
+  color: #848c8f;
+  font-size: 14px;
+}
+
+/* line 219, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#search-form button {
+  box-sizing: border-box;
+  height: 90%;
+  padding: 0;
+}
+
+/* line 225, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#search-icon {
+  height: 13px;
+  filter: opacity(0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* line 232, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#notification-icon {
+  width: 18px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* line 238, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#notification-icon + p {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 52px;
+  color: white;
+  background-color: black;
+  z-index: 1;
+  border-radius: 3px;
+  line-height: 14px;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+/* line 254, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#activity:hover img {
+  opacity: 1;
+}
+
+/* line 258, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 265, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#activity:hover p {
+  visibility: visible;
+  opacity: 1;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: opacity 250ms ease-in-out;
+}
+
+/* line 272, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#activity p:hover {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+/* line 278, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#user-dropdown {
+  display: none;
+  position: absolute;
+  top: 52px;
+  background-color: white;
+  min-width: 125px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-family: Helvetica;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 10px 0;
+}
+
+/* line 294, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#user:hover #user-dropdown {
+  display: flex;
+}
+
+/* line 298, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#smile-icon {
+  width: 36px;
+  padding-top: 3px;
+}
+
+/* line 303, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: white;
+  background-color: #00ADEF;
+  height: 32px;
+  width: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 32px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: 0.1s;
+}
+
+/* line 322, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-upload img {
+  height: 20px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+  padding-bottom: 1px;
+}
+
+/* line 329, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#auth-upload:hover {
+  background-color: #1a78c0;
+}
+
+/* line 333, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/auth_nav.scss */
+#upload-link {
+  padding-bottom: 1px;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/footer.scss */
+#footer {
+  position: absolute;
+  bottom: -100;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a2e3b;
+}
+
+/* line 11, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/footer.scss */
+#footer img {
+  margin-left: 3vw;
+  height: 80px;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+#home {
+  margin-top: 60px;
+  margin-left: 250px;
+  height: 800px;
+  display: flex;
+}
+
+/* line 8, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+#home > video {
+  width: 400px;
+}
+
+/* line 12, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+#index-title-home {
+  font-family: Helvetica, Arial;
+  max-width: 30vh;
+  color: #1a2e3b;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  line-height: 1.14286;
+  margin-left: 15px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+/* line 24, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.section-heading {
+  text-align: left;
+  color: #1a2e3b;
+  font-weight: 500;
+  font-family: Helvetica, Arial;
+  line-height: 1.333333;
+  font-size: 1.125rem;
+  opacity: 1;
+  margin-left: 80px;
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.video-index-body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 41, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.video-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  max-width: 1500px;
+}
+
+/* line 50, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.video-index-item {
+  display: flex;
+  box-shadow: black;
+  outline: none;
+  margin: 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 60, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.video-item {
+  width: 20vw;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* line 68, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/home.scss */
+.video-index-title {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#left-nav {
+  background-color: #f6f7f8;
+  width: 224px;
+  height: 100vh;
+  position: fixed;
+}
+
+/* line 8, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#first-item {
+  margin: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e3e8e9;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#first-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 142px;
+  height: 37px;
+  border-radius: 3px;
+  background-color: #00ADEF;
+  color: white;
+  font-weight: 500;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 2.71429;
+  letter-spacing: 0.1px;
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#first-item a:hover {
+  background-color: #1a78c0;
+}
+
+/* line 40, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#second-item {
+  margin: 24px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 47, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#second-item a {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 3px;
+  color: #1a2e3b;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.42857;
+}
+
+/* line 61, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#second-item a:first-child {
+  background-color: #e3e8e9;
+}
+
+/* line 65, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#second-item img {
+  width: 20px;
+  padding-right: 8px;
+}
+
+/* line 70, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#second-item a:hover {
+  background-color: #dae1e2;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#third-item-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* line 80, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#third-item {
+  margin-top: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px, 16px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 140px;
+  background-color: white;
+}
+
+/* line 95, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/left_nav.scss */
+#third-item h3 {
+  width: 150px;
+  height: 16px;
+  font-weight: 700;
+  color: #1a2e3b;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1;
+  opacity: 1;
+  text-align: left;
+  font-size: 1rem;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: fade_in;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fade_in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes fade_in {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+/* line 23, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-login {
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title {
+  border-radius: 3px;
+}
+
+/* line 5, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title:first-child {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  color: #1a2e3b;
+  background-color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5625rem 3.125rem;
+  border-bottom: 1px solid #D0D8DB;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form {
+  width: 400px;
+  height: auto;
+  background-color: #FFF;
+  padding: 1.5625rem;
+  padding-bottom: 35px;
+  font-size: .875rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/* line 29, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .9375rem;
+  font-size: 1rem;
+  margin: 0, 25px;
+  border-radius: 3px;
+  border: 1px solid #D0D8DB;
+  outline-color: #d4d8da;
+  margin-bottom: 10px;
+}
+
+/* line 41, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #17272E;
+  text-align: left;
+  padding-left: 1px;
+}
+
+/* line 49, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.submit-form {
+  color: white;
+  font-weight: bold;
+  background-color: #7ec300;
+  border-radius: 3px;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 62, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.submit-form:hover {
+  background-color: #5a9d03;
+}
+
+/* line 66, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text:last-of-type {
+  box-sizing: border-box;
+  height: 16px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#demo-login {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #4267b1;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* line 87, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#demo-login:hover {
+  background-color: #2e579d;
+}
+
+/* line 91, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form #session-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 20px;
+  color: #576266;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* line 101, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#other-form-link {
+  font-size: 14px;
+  color: #36b8f1;
+  padding-left: 3px;
+}
+
+/* line 107, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.errors {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #1a2e3b;
+  background-color: #FFEDED;
+  font-size: small;
+}
+
+/* line 120, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+::placeholder {
+  color: #d4d8da;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.show-body {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 13, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.container {
+  display: flex;
+  background-color: black;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+  z-index: 5;
+}
+
+/* line 24, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.c-video {
+  position: relative;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* line 30, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.video {
+  height: 100%;
+  z-index: 1;
+  outline: none;
+}
+
+/* line 67, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.below-video {
+  display: none;
+  box-sizing: content-box;
+  flex-direction: row;
+  justify-content: center;
+  background-color: green;
+  width: 1500px;
+  height: 100vh;
+}
+
+/* line 77, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.left-wrapper {
+  display: block;
+  width: 70%;
+}
+
+/* line 82, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 87, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.top-section {
+  background-color: lightcoral;
+}
+
+/* line 91, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.bottom-section {
+  height: 30%;
+  background-color: lightcyan;
+}
+
+/* line 96, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.right-wrapper {
+  display: flex;
+  background-color: lightblue;
+  width: 30%;
+}
+
+/* line 102, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.video-description {
+  width: 1200px;
+  height: 100%;
+}
+
+/* line 107, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.top-section {
+  border-bottom: 1px solid #D0D8DB;
+}
+
+/* line 111, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.title {
+  box-sizing: border-box;
+  color: #1a2e3b;
+  font-size: 2.25rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  line-height: 1.1111;
+}
+
+/* line 121, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.owner {
+  color: #1a2e3b;
+  font-weight: 600;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: .875rem;
+  line-height: 1.42857;
+  letter-spacing: .01rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* line 132, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/show.scss */
+.comments-wrapper {
+  display: block;
+  height: 30%;
+  background-color: lightyellow;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/signup_modal.scss */
+.modal-signup {
+  position: relative;
+  top: -20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation-name: fade_in3;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade_in3;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes fade_in3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  width: 100%;
+  height: 2000px;
+  background-image: linear-gradient(#F2F9FF, white);
+  z-index: 0;
+}
+
+/* line 12, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#title {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 6%;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#title h1 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #1a2e3b;
+  font-size: 75px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+/* line 28, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #1a2e3b;
+  opacity: 0.7;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+/* line 37, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#front_buttons {
+  padding-top: 40px;
+  display: flex;
+}
+
+/* line 42, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash, #portfolio_splash {
+  width: 140px;
+  height: 50px;
+  border: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  color: #1a2e3b;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f2f8ff;
+  cursor: pointer;
+}
+
+/* line 58, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash {
+  color: white;
+  background-color: #5077a7;
+  transition: 0.4s;
+}
+
+/* line 64, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash:hover {
+  background-color: #44658d;
+}
+
+/* line 68, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#portfolio_splash:hover {
+  border-color: black;
+}
+
+/* line 72, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#video-wrapper-before {
+  position: relative;
+  top: 7%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+/* line 83, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#video-wrapper-after {
+  position: relative;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transform: translate(-30%, 85vh);
+  transition: all 1s ease;
+}
+
+/* line 95, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#splash-video {
+  position: absolute;
+  border-radius: 3px;
+  width: 85%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  height: auto;
+  text-align: center;
+}
+
+/* line 108, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#base > img {
+  position: absolute;
+  box-sizing: border-box;
+  width: 40%;
+  left: 0;
+  top: 90%;
+  z-index: 0;
+}
+
+/* line 117, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+  position: relative;
+  padding-top: 10px;
+  width: 25vw;
+  height: 40vh;
+  left: 30vw;
+  top: 100vh;
+  z-index: 1;
+  color: #1a2e3b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 133, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.658);
+}
+
+/* line 141, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35%;
+  color: inherit;
+}
+
+/* line 149, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container * {
+  font-size: 16px;
+  line-height: 26px;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+/* line 157, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container :last-child {
+  color: #00adef;
+  font-weight: bold;
+}
+
+/* line 162, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection h2 {
+  color: inherit;
+  font-size: 45px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+/* line 171, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection p {
+  font-weight: 400;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* line 177, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection > button {
+  width: 50%;
+  height: auto;
+  padding: 10px 19px;
+  background-color: #0faef1;
+  color: white;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+/* line 190, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection button:hover {
+  background-color: #0c85b9;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #F2F9FF;
+  z-index: 5;
+}
+
+/* line 8, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+nav {
+  height: 90px;
+  width: 100%;
+  color: #1a2e3b;
+  position: fixed;
+  top: 0;
+  background-color: #F2F9FF;
+  z-index: 5;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+nav button {
+  color: inherit;
+  font-family: Helvetica;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* line 25, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.left_nav button {
+  background-color: #F1F8FF;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 31, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#join {
+  font-size: medium;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  border: 1px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #1a2e3b;
+  text-shadow: 1px 1px 1px rgba(26, 46, 59, 0.25);
+  background-color: #F1F8FF;
+  width: 72px;
+}
+
+/* line 48, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#login {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 53, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#join:hover {
+  border-color: black;
+}
+
+/* line 57, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.navBar {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 63, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.left_nav {
+  display: flex;
+  align-items: center;
+}
+
+/* line 68, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#inspiration {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#inspiration img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 80, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 84, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 90, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 96, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 100, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#pricing {
+  padding-left: 20px;
+}
+
+/* line 104, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.right_nav {
+  display: flex;
+  align-items: center;
+  margin-right: 52px;
+}
+
+/* line 110, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#search {
+  font-size: 15px;
+  font-family: Helvetica;
+  color: #1a2e3b;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-right: 28px;
+  background-color: #F2F9FF;
+  cursor: pointer;
+}
+
+/* line 122, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#search_icon {
+  height: 16px;
+  margin-right: 3px;
+}
+
+/* line 127, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload {
+  background-color: #1a2e3b;
+  font-size: 15px;
+  border-radius: 3px;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border: none;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 144, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload img {
+  height: 25px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+}
+
+/* line 150, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload:hover {
+  background-color: black;
+}
+
+/* line 154, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#logo {
+  background: url("https://i.ibb.co/X8XJS7T/logo-w-back.png") no-repeat;
+  width: 109px;
+  height: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  margin-left: 60px;
+  background-position: 0 -16px;
+}
+
+/* line 165, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#logo:hover {
+  background-position: 0 -91px;
+}
+
+/* line 169, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 174, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content, .solu_content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  min-width: 240px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-family: Helvetica;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+/* line 189, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.solu_content {
+  top: 67px;
+}
+
+/* line 193, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content p, .solu_content p {
+  display: block;
+  transition: 0.2s;
+  width: 100%;
+  border-bottom: 1px solid #eef1f2;
+}
+
+/* line 200, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 204, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.solu_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 208, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown:hover .insp_content {
+  display: flex;
+}
+
+/* line 212, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solu_dropdown:hover .solu_content {
+  display: flex;
+}
+
+/* line 216, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.link {
+  color: #1a2e3b;
+  font-size: inherit;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-page {
+  padding-top: 120px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+}
+
+/* line 13, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-form {
+  padding: 50px;
+  border-radius: 5px;
+  border: 1px dashed #D0D8D8;
+  box-sizing: border-box;
+  width: 650px;
+  height: 750px;
+  background-image: url("https://movie-dev.s3-us-west-1.amazonaws.com/Screen+Shot+2019-11-14+at+2.27.16+PM.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 27, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#preview {
+  height: 250px;
+  width: 400px;
+  border: 1px solid #D0D8D8;
+  border-radius: 3px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-form form {
+  height: 400px;
+  width: 100%;
+  color: #1a2e3b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.35;
+  padding: 30px;
+}
+
+/* line 49, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-form label {
+  width: 100%;
+}
+
+/* line 53, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#video-title {
+  border-radius: 5px;
+  margin: 0 30px;
+  padding: 10px;
+  width: 100%;
+  color: #7d8792;
+  font-weight: 400;
+  font-size: 11px;
+  outline: none;
+  border: 1px solid #D0D8DB;
+}
+
+/* line 66, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#video-desc {
+  border-radius: 5px;
+  margin: 0 30px;
+  padding: 10px;
+  width: 100%;
+  color: #7d8792;
+  font-weight: 400;
+  font-size: 11px;
+  outline: none;
+  border: 1px solid #D0D8DB;
+}
+
+/* line 78, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#video-priv {
+  border-radius: 5px;
+  margin: 0 30px;
+  padding: 10px;
+  width: 100%;
+  color: #7d8792;
+  font-weight: 400;
+  font-size: 11px;
+  outline: none;
+  border: 1px solid #D0D8DB;
+}
+
+/* line 90, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+.fileContainer {
+  overflow: hidden;
+  position: relative;
+  background-color: #00ADEF;
+  width: 100px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  margin: 10px 50px;
+}
+
+/* line 102, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+.fileContainer [type=file] {
+  cursor: inherit;
+  display: block;
+  font-size: 999px;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+/* line 116, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+.fileContainer:active {
+  background-color: #00638a;
+}
+
+/* line 120, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-video-button {
+  background-color: #00ADEF;
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  margin: 0 50px;
+  font-weight: bold;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+/* line 134, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/upload_form.scss */
+#upload-video-button:active {
+  background-color: #00638a;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/video.scss */
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 10, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/video.scss */
+.video-wrapper {
+  position: relative;
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, a,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, .link
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 30, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+button {
+  outline: none;
+  border: none;
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+#root {
+  background-image: linear-gradient(#F2F9FF, white);
+}
+
+/* line 39, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, a,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, .link
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  vertical-align: baseline;
+}
+
+/* line 22, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 30, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+button {
+  outline: none;
+  border: none;
+}
+
+/* line 35, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+#root {
+  background-image: linear-gradient(#F2F9FF, white);
+}
+
+/* line 39, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/signup_modal.scss */
+.modal-signup {
+  position: relative;
+  top: -20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+  -webkit-animation-name: fade_in3;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade_in3;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes fade_in3 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: fade_in;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fade_in;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes fade_in {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+/* line 23, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/login_modal.scss */
+.modal-login {
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 400px;
+  height: auto;
+  z-index: 110;
+  color: black;
+  background-color: white;
+  visibility: visible;
+}
+
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  width: 100%;
+  height: 2000px;
+  background-image: linear-gradient(#F2F9FF, white);
+  z-index: 0;
+}
+
+/* line 12, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#title {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 6%;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#title h1 {
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #1a2e3b;
+  font-size: 75px;
+  line-height: 80px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+/* line 28, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #1a2e3b;
+  opacity: 0.7;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+/* line 37, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#front_buttons {
+  padding-top: 40px;
+  display: flex;
+}
+
+/* line 42, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash, #portfolio_splash {
+  width: 140px;
+  height: 50px;
+  border: 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  color: #1a2e3b;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #f2f8ff;
+  cursor: pointer;
+}
+
+/* line 58, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash {
+  color: white;
+  background-color: #5077a7;
+  transition: 0.4s;
+}
+
+/* line 64, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#linkedin_splash:hover {
+  background-color: #44658d;
+}
+
+/* line 68, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#portfolio_splash:hover {
+  border-color: black;
+}
+
+/* line 72, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#video-wrapper-before {
+  position: relative;
+  top: 7%;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+/* line 83, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#video-wrapper-after {
+  position: relative;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  transform: translate(-30%, 85vh);
+  transition: all 1s ease;
+}
+
+/* line 95, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#splash-video {
+  position: absolute;
+  border-radius: 3px;
+  width: 85%;
+  box-sizing: border-box;
+  max-width: 1500px;
+  height: auto;
+  text-align: center;
+}
+
+/* line 108, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#base > img {
+  position: absolute;
+  box-sizing: border-box;
+  width: 40%;
+  left: 0;
+  top: 90%;
+  z-index: 0;
+}
+
+/* line 117, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+  position: relative;
+  padding-top: 10px;
+  width: 25vw;
+  height: 40vh;
+  left: 30vw;
+  top: 100vh;
+  z-index: 1;
+  color: #1a2e3b;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 133, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70%;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.658);
+}
+
+/* line 141, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 35%;
+  color: inherit;
+}
+
+/* line 149, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container * {
+  font-size: 16px;
+  line-height: 26px;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+/* line 157, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+.inner-container :last-child {
+  color: #00adef;
+  font-weight: bold;
+}
+
+/* line 162, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection h2 {
+  color: inherit;
+  font-size: 45px;
+  line-height: 50px;
+  letter-spacing: -1px;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+/* line 171, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection p {
+  font-weight: 400;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* line 177, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection > button {
+  width: 50%;
+  height: auto;
+  padding: 10px 19px;
+  background-color: #0faef1;
+  color: white;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+/* line 190, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash.scss */
+#viewsection button:hover {
+  background-color: #0c85b9;
+}
+
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #F2F9FF;
+  z-index: 5;
+}
+
+/* line 8, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+nav {
+  height: 90px;
+  width: 100%;
+  color: #1a2e3b;
+  position: fixed;
+  top: 0;
+  background-color: #F2F9FF;
+  z-index: 5;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+nav button {
+  color: inherit;
+  font-family: Helvetica;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* line 25, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.left_nav button {
+  background-color: #F1F8FF;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 31, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#join {
+  font-size: medium;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 10px;
+  border: 1px;
+  border-style: solid;
+  border-color: #BBC6CE;
+  border-radius: 3px;
+  font-weight: 500;
+  color: #1a2e3b;
+  text-shadow: 1px 1px 1px rgba(26, 46, 59, 0.25);
+  background-color: #F1F8FF;
+  width: 72px;
+}
+
+/* line 48, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#login {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 53, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#join:hover {
+  border-color: black;
+}
+
+/* line 57, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.navBar {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 63, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.left_nav {
+  display: flex;
+  align-items: center;
+}
+
+/* line 68, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#inspiration {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#inspiration img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 80, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 84, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions {
+  padding: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* line 90, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions img {
+  height: 7px;
+  margin: 2px;
+  transition: 0.2s ease 0s;
+}
+
+/* line 96, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solutions:hover img {
+  transform: rotateZ(180deg);
+}
+
+/* line 100, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#pricing {
+  padding-left: 20px;
+}
+
+/* line 104, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.right_nav {
+  display: flex;
+  align-items: center;
+  margin-right: 52px;
+}
+
+/* line 110, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#search {
+  font-size: 15px;
+  font-family: Helvetica;
+  color: #1a2e3b;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-right: 28px;
+  background-color: #F2F9FF;
+  cursor: pointer;
+}
+
+/* line 122, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#search_icon {
+  height: 16px;
+  margin-right: 3px;
+}
+
+/* line 127, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload {
+  background-color: #1a2e3b;
+  font-size: 15px;
+  border-radius: 3px;
+  color: white;
+  width: 120px;
+  height: 40px;
+  border: none;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-right: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 144, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload img {
+  height: 25px;
+  filter: brightness(0) invert(1);
+  margin-right: 5px;
+}
+
+/* line 150, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#upload:hover {
+  background-color: black;
+}
+
+/* line 154, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#logo {
+  background: url("https://i.ibb.co/X8XJS7T/logo-w-back.png") no-repeat;
+  width: 109px;
+  height: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  margin-left: 60px;
+  background-position: 0 -16px;
+}
+
+/* line 165, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#logo:hover {
+  background-position: 0 -91px;
+}
+
+/* line 169, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 174, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content, .solu_content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  background-color: white;
+  min-width: 240px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  font-family: Helvetica;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+/* line 189, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.solu_content {
+  top: 67px;
+}
+
+/* line 193, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content p, .solu_content p {
+  display: block;
+  transition: 0.2s;
+  width: 100%;
+  border-bottom: 1px solid #eef1f2;
+}
+
+/* line 200, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.insp_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 204, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.solu_content p:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* line 208, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#insp_dropdown:hover .insp_content {
+  display: flex;
+}
+
+/* line 212, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+#solu_dropdown:hover .solu_content {
+  display: flex;
+}
+
+/* line 216, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/splash_nav.scss */
+.link {
+  color: #1a2e3b;
+  font-size: inherit;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 40px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+/* line 1, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title {
+  border-radius: 3px;
+}
+
+/* line 5, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#session-title:first-child {
+  box-sizing: border-box;
+  width: 400px;
+  height: 75px;
+  color: #1a2e3b;
+  background-color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5625rem 3.125rem;
+  border-bottom: 1px solid #D0D8DB;
+}
+
+/* line 18, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form {
+  width: 400px;
+  height: auto;
+  background-color: #FFF;
+  padding: 1.5625rem;
+  padding-bottom: 35px;
+  font-size: .875rem;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/* line 29, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .9375rem;
+  font-size: 1rem;
+  margin: 0, 25px;
+  border-radius: 3px;
+  border: 1px solid #D0D8DB;
+  outline-color: #d4d8da;
+  margin-bottom: 10px;
+}
+
+/* line 41, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #17272E;
+  text-align: left;
+  padding-left: 1px;
+}
+
+/* line 49, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.submit-form {
+  color: white;
+  font-weight: bold;
+  background-color: #7ec300;
+  border-radius: 3px;
+  margin: 0px;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 62, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.submit-form:hover {
+  background-color: #5a9d03;
+}
+
+/* line 66, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form .text:last-of-type {
+  box-sizing: border-box;
+  height: 16px;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+/* line 74, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#demo-login {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  background-color: #4267b1;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* line 87, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#demo-login:hover {
+  background-color: #2e579d;
+}
+
+/* line 91, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.session_form #session-footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 20px;
+  color: #576266;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* line 101, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+#other-form-link {
+  font-size: 14px;
+  color: #36b8f1;
+  padding-left: 3px;
+}
+
+/* line 107, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+.errors {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 3px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #1a2e3b;
+  background-color: #FFEDED;
+  font-size: small;
+}
+
+/* line 120, /Users/Phil/Documents/Full_Stack_Project/movie/app/assets/stylesheets/api/session_form.scss */
+::placeholder {
+  color: #d4d8da;
+}
