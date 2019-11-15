@@ -63,7 +63,7 @@ class AuthNav extends React.Component {
             <div id="user">
               <img id="smile-icon"src="https://movie-dev.s3-us-west-1.amazonaws.com/happiness_color.png" alt="smile-face"/>
               <ul id="user-dropdown">
-                <li><Link to="/user">User Profile</Link></li>
+                <li><Link to="/user">{this.props.currentUser.name}</Link></li>
                 <li><button onClick={this.props.logout}>Log Out</button></li>
               </ul>
             </div>

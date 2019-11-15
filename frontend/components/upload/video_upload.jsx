@@ -26,6 +26,7 @@ class videoUpload extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
+    //makes modal come up 
     const formData = new FormData();
     formData.append('video[title]', this.state.title);
     formData.append('video[owner_id]', this.state.owner_id);
@@ -35,7 +36,11 @@ class videoUpload extends React.Component {
     }
 
     this.props.uploadVideo(formData)
-      .then((video)=> this.props.history.push(`/video/${video.id}`))
+      .then(action => {
+        let video = Object.values(action.video)[0]
+        this.props.history.push(`/video/${video.id}`)
+        // this.props.close
+      })
       .fail(errors => console.log(errors))
   }
 

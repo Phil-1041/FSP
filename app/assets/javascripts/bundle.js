@@ -298,21 +298,21 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _top_nav_splash_nav_container__WEBPACK_IMPORTED_MODULE_4__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
     path: "/",
     component: _top_nav_auth_nav_container__WEBPACK_IMPORTED_MODULE_5__["default"]
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
     path: "/home",
     component: _index_user_home_container__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
     exact: true,
     path: "/videos",
     component: _video_index_container__WEBPACK_IMPORTED_MODULE_8__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
     exact: true,
     path: "/upload",
     component: _upload_video_upload_container__WEBPACK_IMPORTED_MODULE_10__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_2__["ProtectedRoute"], {
     path: "/video/:videoId",
     component: _video_show_container__WEBPACK_IMPORTED_MODULE_9__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -1342,7 +1342,7 @@ function (_React$Component) {
         id: "user-dropdown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/user"
-      }, "User Profile")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, this.props.currentUser.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.props.logout
       }, "Log Out")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "upload-link"
@@ -1638,7 +1638,8 @@ function (_React$Component) {
     value: function handleSubmit(e) {
       var _this3 = this;
 
-      e.preventDefault();
+      e.preventDefault(); //makes modal come up 
+
       var formData = new FormData();
       formData.append('video[title]', this.state.title);
       formData.append('video[owner_id]', this.state.owner_id);
@@ -1647,8 +1648,11 @@ function (_React$Component) {
         formData.append('video[video]', this.state.videoFile);
       }
 
-      this.props.uploadVideo(formData).then(function (video) {
-        return _this3.props.history.push("/video/".concat(video.id));
+      this.props.uploadVideo(formData).then(function (action) {
+        var video = Object.values(action.video)[0];
+
+        _this3.props.history.push("/video/".concat(video.id)); // this.props.close
+
       }).fail(function (errors) {
         return console.log(errors);
       });
@@ -2303,8 +2307,7 @@ var videoReducer = function videoReducer() {
       return action.videos;
 
     case _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VIDEO"]:
-      newState[action.video.id] = action.video;
-      return newState;
+      return action.video;
 
     default:
       return state;

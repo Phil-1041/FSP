@@ -17,18 +17,18 @@ const App = () => (
     <header>
     <Switch>
       <AuthRoute exact path='/' component={SplashNavContainer} />
-      <Route path='/' component={AuthNavContainer} />
+      <ProtectedRoute path='/' component={AuthNavContainer} />
     </Switch>
     </header>
     <Switch>
       <ProtectedRoute path='/home' component={Home} />
-      <Route exact path='/videos' component={videoIndex} />
-      <Route exact path='/upload' component={videoUpload} />
-      <Route path='/video/:videoId' component={videoShow} />
+      <ProtectedRoute exact path='/videos' component={videoIndex} />
+      <ProtectedRoute exact path='/upload' component={videoUpload} />
+      <ProtectedRoute path='/video/:videoId' component={videoShow} />
       <Route path='/linkedin' component={() => {
         window.location.href = 'https://www.linkedin.com/in/phil-zheng-82a30751/';
-        return null;
-      }} />
+        return null;}} 
+      />
       <AuthRoute path='/' component={Splash} />
     </Switch>
     <footer>
