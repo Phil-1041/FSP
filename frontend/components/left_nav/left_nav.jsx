@@ -5,7 +5,9 @@ const LeftNav = ({ user }) => (
   <div id="left-nav">
    
     <div id="first-item">
-      <Link to='/upload'>Upload</Link> 
+      <Link to='/upload'> 
+        <img src="https://movie-dev.s3-us-west-1.amazonaws.com/white-plus.png" alt="plus-video"/>
+      New video</Link> 
     </div>
 
     <div id="second-item">
