@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GithubIcon from '../resources/github_icon';
+import LinkedinIcon from '../resources/linkedin_icon';
 
 const LeftNav = ({ user }) => (
   <div id="left-nav">
@@ -29,17 +31,59 @@ const LeftNav = ({ user }) => (
       </Link>
     </div>
 
-    <div id="third-item-container">
-      <div id="third-item">
-        <h3>Vimeo Pro</h3>
-        <p>Powerful privacy options and analytics</p>
-        <button>Upgrade</button>
-      </div>
-    </div>
-
+    <div id="border-div"></div>
+    
     <div id="fourth-item">
-      <p>Greetings {user.name}</p>
+        <p>Hello {user.name},</p>
+        <p className="welcome-message">thanks for visiting!</p>
+        <br/>
+        <p className="welcome-message">You can also checkout my Github or LinkedIn.</p>
+        <br/>
+        <div id="job-search-links">
+          <div>
+
+          <a
+            href="https://github.com/Phil-1041"
+            className="github"
+            target="_blank"
+            >
+            <GithubIcon />
+          </a>
+          </div>
+          <div>
+
+          <a
+              href="https://www.linkedin.com/in/phil-zheng-82a30751/"
+              className="linkedin"
+              target="_blank"
+              >
+            <LinkedinIcon />
+          </a>
+          </div>
+        </div>
     </div>
+{/* 
+      <img
+        src="https://movie-dev.s3-us-west-1.amazonaws.com/Phil_Zheng.jpg"
+        alt="Photo of Phil Zheng"
+      /> */}
+      {/* <div className="icon-links">
+        <a
+          href="https://github.com/Phil-1041"
+          className="github"
+          target="_blank"
+        >
+          <GithubIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/phil-zheng-82a30751/"
+          className="linkedin"
+          target="_blank"
+        >
+          <LinkedinIcon />
+        </a>
+      </div> */}
+      {/* <a href="">Porfolio</a> */}
    
   </div>
 )

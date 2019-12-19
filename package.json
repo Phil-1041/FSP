@@ -36,6 +36,7 @@
     "npm": "6.4.1"
   },
   "devDependencies": {
+    "image-webpack-loader": "^6.0.0",
     "video.js": "^7.6.5"
   }
 }

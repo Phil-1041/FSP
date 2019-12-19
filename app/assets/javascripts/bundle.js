@@ -553,6 +553,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _resources_github_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../resources/github_icon */ "./frontend/components/resources/github_icon.jsx");
+/* harmony import */ var _resources_linkedin_icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../resources/linkedin_icon */ "./frontend/components/resources/linkedin_icon.jsx");
+
+
 
 
 
@@ -590,12 +594,24 @@ var LeftNav = function LeftNav(_ref) {
     src: "https://movie-dev.s3-us-west-1.amazonaws.com/chat.png",
     alt: "showcase-icon"
   }), "Showcases")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "third-item-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "third-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Vimeo Pro"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Powerful privacy options and analytics"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", null, "Upgrade"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "border-div"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     id: "fourth-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Greetings ", user.name)));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello ", user.name, ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "welcome-message"
+  }, "thanks for visiting!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "welcome-message"
+  }, "You can also checkout my Github or LinkedIn."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "job-search-links"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/Phil-1041",
+    className: "github",
+    target: "_blank"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_resources_github_icon__WEBPACK_IMPORTED_MODULE_2__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.linkedin.com/in/phil-zheng-82a30751/",
+    className: "linkedin",
+    target: "_blank"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_resources_linkedin_icon__WEBPACK_IMPORTED_MODULE_3__["default"], null))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (LeftNav);
@@ -713,6 +729,62 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, mapDispatchToProps)(Modal));
+
+/***/ }),
+
+/***/ "./frontend/components/resources/github_icon.jsx":
+/*!*******************************************************!*\
+  !*** ./frontend/components/resources/github_icon.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var GithubIcon = function GithubIcon() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "icon",
+    viewBox: "0 0 136 133",
+    xmlns: "http://www.w3.org/2000/svg",
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    strokeLinejoin: "round",
+    strokeMiterlimit: "2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M67.867.004C30.392.004 0 30.39 0 67.879c0 29.987 19.446 55.425 46.417 64.4 3.396.625 4.633-1.471 4.633-3.271 0-1.613-.058-5.88-.091-11.542-18.88 4.1-22.863-9.1-22.863-9.1-3.087-7.841-7.537-9.929-7.537-9.929-6.163-4.208.466-4.125.466-4.125 6.813.48 10.396 6.996 10.396 6.996 6.054 10.37 15.888 7.375 19.754 5.637.617-4.383 2.371-7.375 4.309-9.07-15.071-1.713-30.917-7.538-30.917-33.546 0-7.409 2.646-13.471 6.988-18.213-.7-1.717-3.03-8.62.666-17.962 0 0 5.696-1.825 18.663 6.958 5.412-1.508 11.22-2.258 16.992-2.288 5.766.03 11.57.78 16.991 2.288 12.959-8.783 18.646-6.958 18.646-6.958 3.704 9.341 1.375 16.245.68 17.962 4.35 4.742 6.974 10.804 6.974 18.213 0 26.075-15.87 31.812-30.987 33.491 2.433 2.096 4.604 6.238 4.604 12.567 0 9.075-.083 16.396-.083 18.62 0 1.818 1.225 3.93 4.666 3.268 26.95-8.996 46.38-34.417 46.38-64.396 0-37.488-30.392-67.875-67.88-67.875z"
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (GithubIcon);
+
+/***/ }),
+
+/***/ "./frontend/components/resources/linkedin_icon.jsx":
+/*!*********************************************************!*\
+  !*** ./frontend/components/resources/linkedin_icon.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LinkedinIcon; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function LinkedinIcon() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "icon",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"
+  }));
+}
 
 /***/ }),
 
